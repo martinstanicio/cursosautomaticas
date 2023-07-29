@@ -10,6 +10,8 @@
     "format": "prettier . --write"
   },
   "dependencies": {
+    "@carbon/icons-react": "^11.23.1",
+    "@types/carbon__icons-react": "^11.20.0",
     "@types/node": "20.4.5",
     "@types/react": "18.2.17",
     "@types/react-dom": "18.2.7",
