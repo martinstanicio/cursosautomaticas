@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const button = cva(
@@ -50,10 +51,13 @@ const button = cva(
 
 export interface Props
   extends React.AnchorHTMLAttributes<HTMLAnchorElement>,
-    VariantProps<typeof button> {}
+    VariantProps<typeof button> {
+  href: string;
+}
 
 export default function Button({
   children,
+  href,
   size,
   intent,
   variant,
@@ -61,8 +65,12 @@ export default function Button({
   ...props
 }: Props) {
   return (
-    <a className={button({ size, intent, variant, className })} {...props}>
+    <Link
+      href={href}
+      className={button({ size, intent, variant, className })}
+      {...props}
+    >
       {children}
-    </a>
+    </Link>
   );
 }
