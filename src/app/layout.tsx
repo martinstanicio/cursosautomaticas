@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/styles/main.css";
 
 import { Nunito, Play } from "next/font/google";
 
