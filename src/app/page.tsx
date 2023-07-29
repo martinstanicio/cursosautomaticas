@@ -5,7 +5,7 @@ export default function Home() {
         Conduce la excelencia en tu aprendizaje con{" "}
         <span className="text-accent-600">Cursos Automáticas</span>
       </h1>
-      <p className="text-neutral-300">
+      <p>
         Aprende de la experiencia de Carlos Grosso, experto en reparación de
         cajas automáticas.
       </p>

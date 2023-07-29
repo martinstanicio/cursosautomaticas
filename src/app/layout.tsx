@@ -51,7 +51,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${headings.variable} ${body.variable}`}>
-      <body className="font-body">{children}</body>
+      <body className="font-body text-neutral-300">{children}</body>
     </html>
   );
 }
