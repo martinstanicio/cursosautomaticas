@@ -15,6 +15,9 @@ module.exports = {
         headings: ["var(--font-headings)", ...fontFamily.sans],
         body: ["var(--font-body)", ...fontFamily.sans],
       },
+      borderWidth: {
+        2.5: "2.5px",
+      },
     },
   },
   plugins: [],
