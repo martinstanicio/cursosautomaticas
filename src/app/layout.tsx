@@ -2,6 +2,7 @@ import "@/styles/main.css";
 
 import { Nunito, Play } from "next/font/google";
 
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
 
@@ -55,6 +56,7 @@ export default function RootLayout({
       <body className="bg-neutral-900 font-body text-neutral-300">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
