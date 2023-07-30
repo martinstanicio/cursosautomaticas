@@ -2,6 +2,7 @@ import "@/styles/main.css";
 
 import { Nunito, Play } from "next/font/google";
 
+import Header from "@/components/Header";
 import type { Metadata } from "next";
 
 const headings = Play({
@@ -52,6 +53,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${headings.variable} ${body.variable}`}>
       <body className="bg-neutral-900 font-body text-neutral-300">
+        <Header />
         {children}
       </body>
     </html>

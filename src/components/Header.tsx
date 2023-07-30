@@ -1,0 +1,104 @@
+"use client";
+
+import { Close as CloseIcon, Menu as MenuIcon } from "@carbon/icons-react";
+import { Menu, Transition } from "@headlessui/react";
+
+import Brand from "./Brand";
+import Button from "./Button";
+import Link from "next/link";
+
+export function Nav({
+  _static = false,
+  className,
+}: {
+  _static?: boolean;
+  className?: string;
+}) {
+  return (
+    <Menu.Items
+      static={_static}
+      as={"nav"}
+      className={`${className} flex gap-6 font-bold uppercase`}
+    >
+      <Menu.Item>
+        {({ active }) => (
+          <Link
+            href="/cursos"
+            className={`border-bottom-2 border-transparent ${
+              active && "border-neutral-50 text-neutral-50"
+            }`}
+          >
+            Cursos
+          </Link>
+        )}
+      </Menu.Item>
+      <Menu.Item>
+        {({ active }) => (
+          <Link
+            href="/login"
+            className={`border-bottom-2 border-transparent ${
+              active && "border-neutral-50 text-neutral-50"
+            }`}
+          >
+            Iniciar sesión
+          </Link>
+        )}
+      </Menu.Item>
+      <Menu.Item>
+        {({ active }) => (
+          <Button
+            href="/signup"
+            size="small"
+            intent="primary"
+            className={`${active && "bg-accent-700"}`}
+          >
+            ¡Regístrate ahora!
+          </Button>
+        )}
+      </Menu.Item>
+    </Menu.Items>
+  );
+}
+
+export default function Header() {
+  return (
+    <header className="flex items-center justify-between px-6 py-4">
+      <Brand textClassName="hidden min-[400px]:block" />
+
+      <Menu as={"div"} className="relative">
+        {({ open }) => (
+          <>
+            <div className="lg:hidden">
+              <Menu.Button>
+                {open ? (
+                  <CloseIcon
+                    size={"glyph"}
+                    className="aspect-square w-8 hover:text-neutral-50 focus:text-neutral-50"
+                  />
+                ) : (
+                  <MenuIcon
+                    size={"glyph"}
+                    className="aspect-square w-8 hover:text-neutral-50 focus:text-neutral-50"
+                  />
+                )}
+              </Menu.Button>
+              <Transition
+                enter="transition duration-100 ease-out"
+                enterFrom="transform scale-95 opacity-0"
+                enterTo="transform scale-100 opacity-100"
+                leave="transition duration-75 ease-out"
+                leaveFrom="transform scale-100 opacity-100"
+                leaveTo="transform scale-95 opacity-0"
+              >
+                <Nav className="absolute right-0 mt-2 w-64 origin-top-right flex-col bg-neutral-800 p-6 shadow before:absolute before:-top-2 before:right-2 before:h-0 before:w-0 before:border-x-8 before:border-b-8 before:border-x-transparent before:border-b-neutral-800" />
+              </Transition>
+            </div>
+            <div className="hidden lg:block">
+              <Nav _static className="items-center" />
+            </div>
+          </>
+        )}
+      </Menu>
+    </header>
+  );
+}
