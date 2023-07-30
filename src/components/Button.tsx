@@ -2,7 +2,7 @@ import Link from "next/link";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const button = cva(
-  "inline-block uppercase font-bold text-center outline-offset-4 cursor-pointer transition-colors duration-100 border-2.5",
+  "inline-block cursor-pointer border-2.5 text-center font-bold uppercase shadow outline-offset-4 transition-colors duration-100",
   {
     variants: {
       size: {
