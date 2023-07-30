@@ -51,7 +51,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${headings.variable} ${body.variable}`}>
-      <body className="font-body text-neutral-300">{children}</body>
+      <body className="bg-neutral-900 font-body text-neutral-300">
+        {children}
+      </body>
     </html>
   );
 }
