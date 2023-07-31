@@ -6,6 +6,7 @@ import { Menu, Transition } from "@headlessui/react";
 import Brand from "./Brand";
 import Button from "./Button";
 import Link from "next/link";
+import { twMerge } from "tailwind-merge";
 
 export default function Header() {
   return (
@@ -46,7 +47,7 @@ export default function Header() {
                     {({ active }) => (
                       <Link
                         href="/cursos"
-                        className={`${active && "text-neutral-50"}`}
+                        className={twMerge(active && "text-neutral-50")}
                       >
                         Cursos
                       </Link>
@@ -56,7 +57,7 @@ export default function Header() {
                     {({ active }) => (
                       <Link
                         href="/login"
-                        className={`${active && "text-neutral-50"}`}
+                        className={twMerge(active && "text-neutral-50")}
                       >
                         Iniciar sesión
                       </Link>
@@ -68,7 +69,7 @@ export default function Header() {
                         href="/signup"
                         size="small"
                         intent="primary"
-                        className={`${active && "bg-accent-700"}`}
+                        className={twMerge(active && "bg-accent-700")}
                       >
                         ¡Regístrate ahora!
                       </Button>

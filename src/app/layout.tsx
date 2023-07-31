@@ -5,6 +5,7 @@ import { Nunito, Play } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
+import { twMerge } from "tailwind-merge";
 
 const headings = Play({
   variable: "--font-headings",
@@ -52,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${headings.variable} ${body.variable}`}>
+    <html lang="es" className={twMerge(body.variable, headings.variable)}>
       <body className="bg-neutral-900 font-body text-neutral-300">
         <Header />
         {children}

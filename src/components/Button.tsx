@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { cva, type VariantProps } from "class-variance-authority";
+import { twMerge } from "tailwind-merge";
 
 const button = cva(
   "inline-block cursor-pointer border-2.5 text-center font-bold uppercase shadow outline-offset-4 transition-colors duration-100",
@@ -67,7 +68,7 @@ export default function Button({
   return (
     <Link
       href={href}
-      className={button({ size, intent, variant, className })}
+      className={twMerge(button({ size, intent, variant, className }))}
       {...props}
     >
       {children}
