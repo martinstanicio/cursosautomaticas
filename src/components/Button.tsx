@@ -3,13 +3,13 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
 const button = cva(
-  "inline-block cursor-pointer border-2.5 text-center font-bold uppercase shadow outline-offset-4 transition-colors duration-100",
+  "border-2.5 inline-block cursor-pointer px-[1.5em] py-[0.75em] text-center font-bold uppercase shadow outline-offset-4 transition-colors duration-100 w-full sm:w-auto",
   {
     variants: {
       size: {
-        small: "px-4 py-2 text-sm",
-        medium: "px-5 py-3 text-base",
-        big: "px-7 py-4 text-lg",
+        small: "text-sm",
+        medium: "text-base",
+        big: "text-lg",
       },
       intent: {
         primary: "text-neutral-50 border-transparent",
