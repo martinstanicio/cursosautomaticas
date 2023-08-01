@@ -7,10 +7,24 @@ import Brand from "./Brand";
 import Button from "./Button";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
+import { usePathname } from "next/navigation";
 
-export default function Header() {
-  return (
-    <header className="flex items-center justify-between px-2 py-4 sm:px-4">
+export default function Header({
+  className = "",
+  hideOnHome = false,
+}: {
+  className?: string;
+  hideOnHome?: boolean;
+}) {
+  return usePathname() === "/" && hideOnHome ? (
+    <></>
+  ) : (
+    <header
+      className={twMerge(
+        "flex items-center justify-between bg-black px-2 py-4 sm:px-4",
+        className,
+      )}
+    >
       <Brand textClassName="hidden min-[400px]:block" />
 
       <Menu as={"div"} className="relative">
