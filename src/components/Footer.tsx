@@ -43,7 +43,7 @@ export default function Footer() {
           <li>
             Página web diseñada por{" "}
             <Link
-              href="https://www.instagram.com/martinstanicio/"
+              href="mailto:staniciomartin@gmail.com"
               className="font-bold text-accent-500 hover:underline focus:underline"
             >
               Martín Stanicio
