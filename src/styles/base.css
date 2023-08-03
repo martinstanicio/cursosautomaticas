@@ -3,7 +3,7 @@ h2 {
 }
 
 h3 {
-  @apply font-headings text-xl font-bold tracking-tight text-neutral-50;
+  @apply font-headings font-bold tracking-tight text-neutral-50;
 }
 
 .link:is(:hover, :focus) {
