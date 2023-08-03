@@ -46,8 +46,8 @@ export default function Home() {
           </div>
         </section>
         <section className="bg-black">
-          <div className="mx-auto grid max-w-5xl grid-rows-2 gap-12 px-2 py-16 sm:px-4 md:grid-cols-2 md:grid-rows-1 md:px-8 lg:px-12">
-            <div>
+          <div className="mx-auto flex max-w-5xl flex-col gap-12 px-2 py-16 sm:px-4 md:flex-row md:px-8 lg:px-12">
+            <div className="flex-1">
               <h2 className="mb-8">
                 Conoce a Carlos Grosso, nuestro especialista
               </h2>
@@ -73,7 +73,7 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="relative border-4 border-accent-500">
+            <div className="relative aspect-[4/3] flex-1 border-4 border-accent-500">
               <Image src="/carlosgrosso.jpg" alt="" fill objectFit="cover" />
             </div>
           </div>
