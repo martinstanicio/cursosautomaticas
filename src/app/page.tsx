@@ -7,6 +7,7 @@ import {
 
 import Benefit from "@/components/Benefit";
 import Button from "@/components/Button";
+import Heading from "@/components/Heading";
 import Hero from "@/components/Hero";
 import Image from "next/image";
 
@@ -16,7 +17,9 @@ export default function Home() {
       <Hero />
       <main>
         <section className="mx-auto space-y-8 px-2 py-16 sm:px-4 md:px-8 lg:px-12">
-          <h2 className="text-center">¿Por qué elegir Cursos Automáticas?</h2>
+          <Heading as="h2" size={2} className="text-center">
+            ¿Por qué elegir Cursos Automáticas?
+          </Heading>
           <div className="mx-auto grid max-w-3xl place-items-center justify-center gap-10 sm:grid-cols-2 sm:gap-y-16">
             <Benefit icon={Education} title="Clases con un experto">
               Aprende directamente del especialista{" "}
@@ -46,7 +49,9 @@ export default function Home() {
         <section className="bg-black">
           <div className="mx-auto flex max-w-5xl flex-col gap-12 px-2 py-16 sm:px-4 md:flex-row md:px-8 lg:px-12">
             <div className="flex-1 space-y-8">
-              <h2>Conoce a Carlos Grosso, nuestro especialista</h2>
+              <Heading as="h2" size={2}>
+                Conoce a Carlos Grosso, nuestro especialista
+              </Heading>
               <div className="space-y-4">
                 <p>
                   <strong>Carlos Grosso</strong> es un apasionado de las cajas

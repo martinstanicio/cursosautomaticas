@@ -1,4 +1,5 @@
 import type { CarbonIconType } from "@carbon/icons-react";
+import Heading from "./Heading";
 
 export default function Benefit({
   icon: Icon,
@@ -13,7 +14,9 @@ export default function Benefit({
     <article className="max-w-[30ch] space-y-2">
       <div className="flex items-center gap-2">
         <Icon size={"glyph"} className="aspect-square w-8 fill-accent-500" />
-        <h3>{title}</h3>
+        <Heading as="h3" size={3}>
+          {title}
+        </Heading>
       </div>
       <p>{children}</p>
     </article>
