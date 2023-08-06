@@ -8,6 +8,7 @@ export const Course = defineDocumentType(() => ({
   fields: {
     title: { type: "string", required: true },
     description: { type: "string", required: true },
+    datetime: { type: "date", required: true },
   },
   computedFields: {
     url: {
