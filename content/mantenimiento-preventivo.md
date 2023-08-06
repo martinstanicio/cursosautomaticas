@@ -1,6 +1,6 @@
 ---
 title: Servicio de mantenimiento preventivo
-datetime: 2023-08-05T16:00-03:00
+datetime: 2023-08-28T18:00-03:00
 description: Aprende a realizar un eficiente servicio de mantenimiento preventivo en diversas transmisiones automáticas y conviértete en un experto en cuidado automotriz.
 ---
 

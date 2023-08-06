@@ -1,6 +1,6 @@
 ---
 title: Cajas automáticas convencionales
-datetime: 2023-08-05T16:00-03:00
+datetime: 2023-09-03T12:00-03:00
 description: Conviértete en un experto de cajas automáticas convencionales dominando su estructura, funcionamiento, diagnóstico y mantenimiento.
 ---
 

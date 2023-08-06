@@ -1,6 +1,6 @@
 ---
 title: Transmisiones automáticas CTV (Variable Continua)
-datetime: 2023-08-05T16:00-03:00
+datetime: 2023-08-05T16:30-03:00
 description: Descubre el apasionante mundo de las transmisiones automáticas CVT y conviértete en un experto en su funcionamiento y mantenimiento.
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Transmisiones DCT (Doble embrague)
-datetime: 2023-08-05T16:00-03:00
+datetime: 2023-08-18T10:00-03:00
 description: Descubre las transmisiones DCT, la perfecta combinación entre comodidad y eficiencia en la industria automotriz, y conviértete en un experto en su mantenimiento y diagnóstico.
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Transmisiones robotizadas
-datetime: 2023-08-05T16:00-03:00
+datetime: 2023-09-01T14:00-03:00
 description: Adéntrate en el emocionante universo de las transmisiones robotizadas y descubre cómo la innovadora tecnología automatiza el cambio de velocidades en los vehículos.
 ---
 
