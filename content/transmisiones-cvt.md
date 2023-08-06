@@ -18,7 +18,7 @@ Proveer a los participantes, el conocimiento y cuidados necesarios para: identif
 
 1. Concepto y aplicación de la **robótica** en el sistema de transmisión.
 2. Leyes que rigen el sistema e inhabilitan su funcionamiento.
-3. Reconocimiento y diferenciación de transmisiones robotizadas de embrague simple; I MOTION – DUALOGIC – EASYTRONIC. Marcas y modelos que las utilizan; comparativos de ventajas y limitaciones respecto a los sistemas de transmisión manual y automática convencional.
+3. Reconocimiento y diferenciación de transmisiones robotizadas de embrague simple; I Motion – Dualogic – Easytronic. Marcas y modelos que las utilizan; comparativos de ventajas y limitaciones respecto a los sistemas de transmisión manual y automática convencional.
 4. Debate, consultas, evaluación y nivelación de los participantes del curso.
 
 ### Módulo B
