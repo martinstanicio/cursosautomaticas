@@ -7,11 +7,17 @@ import {
 
 import Benefit from "@/components/Benefit";
 import Button from "@/components/Button";
+import CourseCard from "@/components/CourseCard";
 import Heading from "@/components/Heading";
 import Hero from "@/components/Hero";
 import Image from "next/image";
+import { allCourses } from "contentlayer/generated";
 
 export default function Home() {
+  const filteredCourses = allCourses
+    .sort((a, b) => Date.parse(a.datetime) - Date.parse(b.datetime))
+    .slice(0, 3);
+
   return (
     <>
       <Hero />
@@ -83,6 +89,19 @@ export default function Home() {
               />
             </div>
           </div>
+        </section>
+        <section className="mx-auto flex max-w-4xl flex-col items-center gap-12 px-2 py-16 sm:px-4 md:px-8 lg:px-12">
+          <Heading as="h2" size={2}>
+            Próximos cursos
+          </Heading>
+          <div className="space-y-4">
+            {filteredCourses.map((course, i) => (
+              <CourseCard key={i} {...course} />
+            ))}
+          </div>
+          <Button href="/cursos" className="sm:mx-auto">
+            Ver todos los cursos
+          </Button>
         </section>
       </main>
     </>
