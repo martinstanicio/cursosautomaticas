@@ -18,6 +18,9 @@ module.exports = {
       borderWidth: {
         2.5: "2.5px",
       },
+      listStyleType: {
+        square: "square",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
