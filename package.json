@@ -12,6 +12,7 @@
   "dependencies": {
     "@carbon/icons-react": "^11.23.1",
     "@headlessui/react": "^1.7.16",
+    "@tailwindcss/typography": "^0.5.9",
     "@types/carbon__icons-react": "^11.20.0",
     "@types/node": "20.4.5",
     "@types/react": "18.2.17",
