@@ -21,7 +21,7 @@ export default function Header({
   ) : (
     <header
       className={twMerge(
-        "flex items-center justify-between bg-black px-2 py-4 sm:px-4",
+        "relative z-50 flex items-center justify-between bg-black px-2 py-4 sm:px-4",
         className,
       )}
     >
