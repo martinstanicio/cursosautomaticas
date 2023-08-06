@@ -17,6 +17,7 @@ export default function CourseCard({
     <article className="flex flex-col overflow-x-hidden rounded bg-neutral-800 shadow sm:grid sm:grid-cols-5">
       <div className="relative col-span-2 aspect-[4/3] sm:aspect-auto">
         <Image
+          className="object-cover"
           src={new URL(
             `https://placehold.co/600x400.png?text=${title}`,
           ).toString()}

@@ -75,7 +75,12 @@ export default function Home() {
               </Button>
             </div>
             <div className="relative aspect-[4/3] flex-1 border-4 border-accent-500">
-              <Image src="/carlosgrosso.jpg" alt="" fill objectFit="cover" />
+              <Image
+                src="/carlosgrosso.jpg"
+                alt=""
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </section>
