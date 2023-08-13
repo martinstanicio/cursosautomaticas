@@ -10,20 +10,14 @@ export default function CourseCard({
   description,
   url,
   datetime,
+  _raw: { flattenedPath: imgName },
 }: Course) {
   const dateObject = new Date(datetime);
 
   return (
     <article className="flex flex-col overflow-x-hidden rounded bg-neutral-800 shadow sm:grid sm:grid-cols-5">
       <div className="relative col-span-2 aspect-[4/3] sm:aspect-auto">
-        <Image
-          className="object-cover"
-          src={new URL(
-            `https://placehold.co/600x400.png?text=${title}`,
-          ).toString()}
-          alt=""
-          fill
-        />
+        <Image className="object-cover" src={`/${imgName}.jpg`} alt="" fill />
       </div>
       <div className="col-span-3 flex flex-col gap-y-4 p-4 sm:items-start sm:justify-between">
         <div>
