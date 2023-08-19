@@ -49,7 +49,10 @@ export default function Curso({ params }: { params: { slug: string } }) {
             switch (Number(headingRank)) {
               case 2:
                 return (
-                  <section className="even:bg-black">
+                  <section
+                    className="even:bg-black"
+                    style={{ counterIncrement: "section" }}
+                  >
                     <div className="mx-auto max-w-3xl px-2 py-16 sm:px-4 md:px-8 lg:px-12">
                       {children}
                     </div>
@@ -70,7 +73,11 @@ export default function Curso({ params }: { params: { slug: string } }) {
             <Link href={href as string}>{children}</Link>
           ),
           h2: ({ children }) => (
-            <Heading as="h2" size={2} className="pb-[1em]">
+            <Heading
+              as="h2"
+              size={2}
+              className="pb-[1em] before:text-accent-500 before:content-[counter(section)_'._']"
+            >
               {children}
             </Heading>
           ),
