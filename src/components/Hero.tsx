@@ -22,7 +22,7 @@ export default function Hero() {
           <Header className="bg-transparent" />
           <div className="container mx-auto flex flex-col gap-12 px-2 sm:px-4 md:px-8 lg:px-12">
             <div className="flex flex-col gap-3">
-              <Heading as="h1" size={1} className="max-w-2xl">
+              <Heading as="h1" size={1} className="max-w-2xl lg:text-6xl">
                 Conduce la excelencia en tu aprendizaje con{" "}
                 <span className="text-accent-600">Cursos Automáticas</span>
               </Heading>

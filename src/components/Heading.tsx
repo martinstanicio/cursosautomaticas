@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 const heading = cva("font-headings font-bold tracking-tight text-neutral-50", {
   variants: {
     size: {
-      1: "text-3xl sm:text-4xl md:text-5xl lg:text-6xl",
+      1: "text-3xl sm:text-4xl md:text-5xl",
       2: "text-2xl sm:text-3xl md:text-4xl",
       3: "",
     },
