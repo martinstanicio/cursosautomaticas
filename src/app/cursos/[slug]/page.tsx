@@ -23,7 +23,7 @@ export default function Curso({ params }: { params: { slug: string } }) {
 
   return (
     <article>
-      <header className="mx-auto max-w-3xl px-2 py-16 sm:px-4 md:px-8 lg:px-12">
+      <header className="mx-auto max-w-3xl space-y-4 px-2 py-16 sm:px-4 md:px-8 lg:px-12">
         <Heading as="h1" size={1}>
           {course.title}
         </Heading>
