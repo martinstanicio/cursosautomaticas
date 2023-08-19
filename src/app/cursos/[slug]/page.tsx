@@ -18,7 +18,7 @@ export default function Curso({ params }: { params: { slug: string } }) {
   const imgPath = `/${course._raw.flattenedPath}.jpg`;
 
   return (
-    <article className="prose prose-neutral mx-auto max-w-3xl space-y-8 px-2 py-16 dark:prose-invert sm:prose-sm md:prose-base marker:font-bold marker:text-accent-500 prose-headings:font-headings prose-headings:font-bold prose-ul:list-square sm:px-4 md:px-8 lg:px-12">
+    <article className="mx-auto max-w-3xl space-y-8 px-2 py-16 marker:font-bold marker:text-accent-500 sm:px-4 md:px-8 lg:px-12">
       <header>
         <Heading as="h1" size={2}>
           {course.title}
