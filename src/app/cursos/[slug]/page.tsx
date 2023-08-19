@@ -82,7 +82,7 @@ export default function Curso({ params }: { params: { slug: string } }) {
             </Heading>
           ),
           h3: ({ children }) => (
-            <Heading as="h3" size={3} className="pb-[1em]">
+            <Heading as="h3" size={3} className="pb-[1em] text-accent-500">
               {children}
             </Heading>
           ),
