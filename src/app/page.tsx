@@ -4,6 +4,7 @@ import {
   Education,
   RecentlyViewed,
 } from "@carbon/icons-react";
+import { allCourses, allTestimonies } from "contentlayer/generated";
 
 import Benefit from "@/components/Benefit";
 import Button from "@/components/Button";
@@ -11,7 +12,7 @@ import CourseCard from "@/components/CourseCard";
 import Heading from "@/components/Heading";
 import Hero from "@/components/Hero";
 import Image from "next/image";
-import { allCourses } from "contentlayer/generated";
+import Testimony from "@/components/Testimony";
 
 export default function Home() {
   const filteredCourses = allCourses
@@ -102,6 +103,22 @@ export default function Home() {
           <Button href="/cursos" className="sm:mx-auto">
             Ver todos los cursos
           </Button>
+        </section>
+        <section className="bg-black">
+          <div className="mx-auto flex max-w-5xl flex-col gap-12 px-2 py-16 sm:px-4 md:px-8 lg:px-12">
+            <Heading as="h2" size={2} className="text-center">
+              Las opiniones de nuestros alumnos
+            </Heading>
+            <div className="flex flex-wrap justify-center gap-4 lg:grid lg:grid-cols-3">
+              {allTestimonies.slice(0, 3).map((testimony, i) => (
+                <Testimony
+                  className="max-w-xs lg:first:scale-95 lg:first:opacity-75 lg:last:scale-95 lg:last:opacity-75"
+                  key={i}
+                  {...testimony}
+                />
+              ))}
+            </div>
+          </div>
         </section>
       </main>
     </>

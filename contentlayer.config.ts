@@ -5,7 +5,7 @@ import sectionize from "@hbsnow/rehype-sectionize";
 
 export const Course = defineDocumentType(() => ({
   name: "Course",
-  filePathPattern: `**/*.(md|mdx)`,
+  filePathPattern: `courses/**/*.(md|mdx)`,
   contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
@@ -21,9 +21,18 @@ export const Course = defineDocumentType(() => ({
   },
 }));
 
+export const Testimony = defineDocumentType(() => ({
+  name: "Testimony",
+  filePathPattern: `testimonies/**/*.md`,
+  fields: {
+    name: { type: "string", required: true },
+    job: { type: "string", required: true },
+  },
+}));
+
 export default makeSource({
   contentDirPath: "content",
-  documentTypes: [Course],
+  documentTypes: [Course, Testimony],
   disableImportAliasWarning: true,
   mdx: {
     rehypePlugins: [sectionize],
