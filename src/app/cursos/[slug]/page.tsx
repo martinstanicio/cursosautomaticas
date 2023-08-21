@@ -6,20 +6,20 @@ import { notFound } from "next/navigation";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
 export const generateStaticParams = () =>
-  allCourses.map((c) => ({ slug: c._raw.flattenedPath }));
+  allCourses.map(({ slug }) => ({ slug }));
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
-  const course = allCourses.find((c) => c._raw.flattenedPath === params.slug);
+  const course = allCourses.find((c) => c.slug === params.slug);
   if (!course) notFound();
   return { title: course.title };
 }
 
 export default function Curso({ params }: { params: { slug: string } }) {
-  const course = allCourses.find((c) => c._raw.flattenedPath === params.slug);
+  const course = allCourses.find((c) => c.slug === params.slug);
   if (!course) notFound();
 
   const Content = useMDXComponent(course.body.code);
-  const imgPath = `/${course._raw.flattenedPath}.jpg`;
+  const imgPath = `/${course._raw.sourceFileDir}/${course.slug}.jpg`;
 
   return (
     <article>

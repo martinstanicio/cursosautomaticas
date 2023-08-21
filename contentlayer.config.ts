@@ -13,10 +13,15 @@ export const Course = defineDocumentType(() => ({
     datetime: { type: "date", required: true },
   },
   computedFields: {
+    slug: {
+      type: "string",
+      resolve: (course: LocalDocument) =>
+        course._raw.sourceFileName.replace(/\.(md|mdx)$/, ""),
+    },
     url: {
       type: "string",
       resolve: (course: LocalDocument) =>
-        `/cursos/${course._raw.flattenedPath}`,
+        `/cursos/${course._raw.sourceFileName.replace(/\.(md|mdx)$/, "")}`,
     },
   },
 }));
