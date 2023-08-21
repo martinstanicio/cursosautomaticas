@@ -2,7 +2,9 @@ import Heading from "@/components/Heading";
 import Image from "next/image";
 import Link from "next/link";
 import { allCourses } from "contentlayer/generated";
+import { defaultClass as defaultSectionClass } from "@/components/Section";
 import { notFound } from "next/navigation";
+import { twMerge } from "tailwind-merge";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
 export const generateStaticParams = () =>
@@ -49,20 +51,20 @@ export default function Curso({ params }: { params: { slug: string } }) {
             switch (Number(headingRank)) {
               case 2:
                 return (
-                  <section
+                  <div
                     className="even:bg-black"
                     style={{ counterIncrement: "section" }}
                   >
-                    <div className="mx-auto max-w-3xl px-2 py-16 sm:px-4 md:px-8 lg:px-12">
+                    <section
+                      className={twMerge(defaultSectionClass, "max-w-3xl")}
+                    >
                       {children}
-                    </div>
-                  </section>
+                    </section>
+                  </div>
                 );
               case 3:
                 return (
-                  <section className="mt-8 first-of-type:mt-0">
-                    {children}
-                  </section>
+                  <div className="mt-8 first-of-type:mt-0">{children}</div>
                 );
 
               default:
