@@ -41,13 +41,7 @@ export default function Curso({ params }: { params: { slug: string } }) {
       </header>
       <Content
         components={{
-          // ! fix typescript error
-          section: ({
-            children,
-            ["data-heading-rank"]: headingRank,
-          }: React.HTMLAttributes<HTMLElement> & {
-            "data-heading-rank"?: string;
-          }) => {
+          section: ({ children, ["data-heading-rank"]: headingRank }: any) => {
             switch (Number(headingRank)) {
               case 2:
                 return (
