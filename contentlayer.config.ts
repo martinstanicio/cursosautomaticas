@@ -30,9 +30,18 @@ export const Testimony = defineDocumentType(() => ({
   },
 }));
 
+export const FAQ = defineDocumentType(() => ({
+  name: "FAQ",
+  filePathPattern: `faq/**/*.md`,
+  fields: {
+    title: { type: "string", required: true },
+    isOpen: { type: "boolean", default: false },
+  },
+}));
+
 export default makeSource({
   contentDirPath: "content",
-  documentTypes: [Course, Testimony],
+  documentTypes: [Course, Testimony, FAQ],
   disableImportAliasWarning: true,
   mdx: {
     rehypePlugins: [sectionize],

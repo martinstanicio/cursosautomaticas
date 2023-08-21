@@ -4,11 +4,12 @@ import {
   Education,
   RecentlyViewed,
 } from "@carbon/icons-react";
-import { allCourses, allTestimonies } from "contentlayer/generated";
+import { allCourses, allFAQs, allTestimonies } from "contentlayer/generated";
 
 import Benefit from "@/components/Benefit";
 import Button from "@/components/Button";
 import CourseCard from "@/components/CourseCard";
+import FAQ from "@/components/FAQ";
 import Heading from "@/components/Heading";
 import Hero from "@/components/Hero";
 import Image from "next/image";
@@ -118,6 +119,16 @@ export default function Home() {
                 />
               ))}
             </div>
+          </div>
+        </section>
+        <section className="mx-auto flex max-w-4xl flex-col items-center gap-12 px-2 py-16 sm:px-4 md:px-8 lg:px-12">
+          <Heading as="h2" size={2}>
+            Preguntas frecuentes (FAQ)
+          </Heading>
+          <div className="w-full space-y-4">
+            {allFAQs.map((faq, i) => (
+              <FAQ key={i} {...faq} />
+            ))}
           </div>
         </section>
       </main>
