@@ -1,8 +1,7 @@
-import { Calendar, Time } from "@carbon/icons-react";
-
-import Button from "@/components/Button";
+import Button from "./Button";
 import type { Course } from "contentlayer/generated";
-import Heading from "@/components/Heading";
+import Datetime from "./Datetime";
+import Heading from "./Heading";
 import Image from "next/image";
 
 export default function CourseCard({
@@ -12,8 +11,6 @@ export default function CourseCard({
   datetime,
   _raw: { flattenedPath: imgName },
 }: Course) {
-  const dateObject = new Date(datetime);
-
   return (
     <article className="flex flex-col overflow-x-hidden rounded bg-neutral-800 shadow sm:grid sm:grid-cols-5">
       <div className="relative col-span-2 aspect-[4/3] sm:aspect-auto">
@@ -28,23 +25,7 @@ export default function CourseCard({
             {description}
           </p>
         </div>
-        <time className="grid w-full grid-cols-2 gap-4 text-sm text-neutral-50">
-          <div className="flex items-center gap-2">
-            <Calendar size="glyph" className="w-8 fill-accent-500" />
-            {dateObject.toLocaleDateString("es-ES", {
-              day: "2-digit",
-              month: "2-digit",
-              year: "numeric",
-            })}
-          </div>
-          <div className="flex items-center gap-2">
-            <Time size="glyph" className="w-8 fill-accent-500" />
-            {dateObject.toLocaleTimeString("es-ES", {
-              hour: "2-digit",
-              minute: "2-digit",
-            })}
-          </div>
-        </time>
+        <Datetime datetime={new Date(datetime)} />
         <Button href={url} size="small">
           Más información
         </Button>
