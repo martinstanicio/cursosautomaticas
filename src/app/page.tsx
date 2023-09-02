@@ -110,7 +110,7 @@ export default function Home() {
             Ver todos los cursos
           </Button>
         </Section>
-        <Section black className="flex max-w-5xl flex-col gap-12">
+        {/* <Section black className="flex max-w-5xl flex-col gap-12">
           <Heading as="h2" size={2} className="text-center">
             Las opiniones de nuestros alumnos
           </Heading>
@@ -123,8 +123,8 @@ export default function Home() {
               />
             ))}
           </div>
-        </Section>
-        <Section className="flex max-w-4xl flex-col items-center gap-12">
+        </Section> */}
+        <Section black className="flex max-w-4xl flex-col items-center gap-12">
           <Heading as="h2" size={2}>
             Preguntas frecuentes (FAQ)
           </Heading>

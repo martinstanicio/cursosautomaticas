@@ -9,7 +9,7 @@ export default function FAQ({
 }: _FAQ) {
   return (
     <details
-      className="group w-full rounded bg-neutral-800 shadow"
+      className="group w-full rounded bg-neutral-900 shadow"
       {...(isOpen ? { open: true } : {})}
     >
       <summary className="flex cursor-pointer list-none items-center justify-between gap-8 p-8">
