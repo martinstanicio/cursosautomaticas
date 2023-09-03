@@ -1,9 +1,24 @@
+"use client";
+
+import { Dialog, Transition } from "@headlessui/react";
+import { Fragment, useState } from "react";
+
 import Button from "./Button";
 import Header from "./Header";
 import Heading from "./Heading";
 import Image from "next/image";
 
 export default function Hero() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
   return (
     <section className="relative bg-black">
       <div className="absolute inset-y-0 right-0 w-full max-w-4xl">
@@ -27,11 +42,56 @@ export default function Hero() {
             <Button href="#" size="big" intent="primary" variant="accent">
               ¡Regístrate ahora!
             </Button>
-            <Button href="#" size="big" intent="secondary" variant="accent">
+            <Button
+              href="#"
+              size="big"
+              intent="secondary"
+              variant="accent"
+              onClick={openModal}
+            >
               Ver video
             </Button>
           </div>
         </div>
+        <Transition appear show={isOpen} as={Fragment}>
+          <Dialog as="div" className="relative z-10" onClose={closeModal}>
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <div className="fixed inset-0 bg-black bg-opacity-50" />
+            </Transition.Child>
+
+            <div className="fixed inset-0 overflow-y-auto">
+              <div className="flex min-h-full items-center justify-center p-2">
+                <Transition.Child
+                  as={Fragment}
+                  enter="ease-out duration-300"
+                  enterFrom="opacity-0 scale-95"
+                  enterTo="opacity-100 scale-100"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100 scale-100"
+                  leaveTo="opacity-0 scale-95"
+                >
+                  <Dialog.Panel className="aspect-video w-full max-w-lg transform overflow-hidden rounded bg-black shadow transition-all">
+                    <video
+                      tabIndex={0}
+                      src="/hero.mp4"
+                      controls
+                      autoPlay
+                      className="h-full w-full"
+                    ></video>
+                  </Dialog.Panel>
+                </Transition.Child>
+              </div>
+            </div>
+          </Dialog>
+        </Transition>
       </div>
     </section>
   );
