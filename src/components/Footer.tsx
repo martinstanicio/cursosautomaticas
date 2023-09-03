@@ -8,23 +8,8 @@ export default function Footer() {
         <Brand />
         <ul className="grid list-none grid-cols-1 gap-y-2 sm:grid-cols-2">
           <li>
-            <Link href="/login" className="link">
-              Iniciar sesión
-            </Link>
-          </li>
-          <li>
-            <Link href="/sobre-nosotros" className="link">
-              Sobre nosotros
-            </Link>
-          </li>
-          <li>
-            <Link href="/signup" className="link">
-              Registrarse
-            </Link>
-          </li>
-          <li>
-            <Link href="/sobre-nosotros" className="link">
-              Sobre nosotros
+            <Link href="/cursos" className="link">
+              Cursos
             </Link>
           </li>
           <li>
@@ -35,6 +20,14 @@ export default function Footer() {
           <li>
             <Link href="/sobre-nosotros" className="link">
               Sobre nosotros
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://www.instagram.com/cursosautomaticas"
+              className="link"
+            >
+              Instagram
             </Link>
           </li>
         </ul>

@@ -60,32 +60,32 @@ export default function Header({
                   <Menu.Item>
                     {({ active }) => (
                       <Link
-                        href="/cursos"
+                        href="/sobre-nosotros"
                         className={twMerge(active && "text-neutral-50")}
                       >
-                        Cursos
+                        Sobre nosotros
                       </Link>
                     )}
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
                       <Link
-                        href="/login"
+                        href="/contacto"
                         className={twMerge(active && "text-neutral-50")}
                       >
-                        Iniciar sesión
+                        Contacto
                       </Link>
                     )}
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
                       <Button
-                        href="/signup"
+                        href="/cursos"
                         size="small"
                         intent="primary"
                         className={twMerge(active && "bg-accent-700")}
                       >
-                        ¡Regístrate ahora!
+                        Nuestros cursos
                       </Button>
                     )}
                   </Menu.Item>
@@ -96,23 +96,23 @@ export default function Header({
               <ul className="flex items-center gap-6 font-bold uppercase">
                 <li>
                   <Link
-                    href="/cursos"
+                    href="/sobre-nosotros"
                     className="hover:text-neutral-50 focus:text-neutral-50"
                   >
-                    Cursos
+                    Sobre nosotros
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/login"
+                    href="/contacto"
                     className="hover:text-neutral-50 focus:text-neutral-50"
                   >
-                    Iniciar sesión
+                    Contacto
                   </Link>
                 </li>
                 <li>
-                  <Button href="/signup" size="small" intent="primary">
-                    ¡Regístrate ahora!
+                  <Button href="/cursos" size="small" intent="primary">
+                    Nuestros cursos
                   </Button>
                 </li>
               </ul>
