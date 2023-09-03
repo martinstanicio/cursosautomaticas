@@ -39,8 +39,8 @@ export default function Home() {
           </Heading>
           <div className="grid place-items-center justify-center gap-10 sm:grid-cols-2 sm:gap-y-16">
             <Benefit icon={Education} title="Clases con un experto">
-              Aprende directamente del especialista{" "}
-              <strong>Carlos Grosso</strong>, quien te guiará a lo largo del
+              De la mano de <strong>Carlos Grosso</strong> y su equipo de
+              expertos, recibirás una orientación personalizada a lo largo de tu
               proceso de aprendizaje.
             </Benefit>
             <Benefit icon={RecentlyViewed} title="Material actualizado">

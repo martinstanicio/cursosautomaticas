@@ -40,9 +40,9 @@ export default function Hero() {
               Conduce la excelencia en tu aprendizaje con{" "}
               <span className="text-accent-600">Cursos Automáticas</span>
             </Heading>
-            <p className="max-w-[35ch]">
-              Aprende de la experiencia de <strong>Carlos Grosso</strong>,
-              experto en reparación de cajas automáticas.
+            <p className="max-w-[36ch]">
+              Aprende de la experiencia de nuestro equipo de profesionales en
+              cajas automáticas, liderado por <strong>Carlos Grosso</strong>.
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
