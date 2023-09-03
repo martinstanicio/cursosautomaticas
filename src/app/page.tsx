@@ -90,6 +90,7 @@ export default function Home() {
           </div>
           <div className="relative aspect-[4/3] flex-1 border-4 border-accent-500">
             <Image
+              sizes="(min-width: 1060px) 436px, (min-width: 780px) 40.77vw, 96.52vw"
               src="/carlosgrosso.jpg"
               alt=""
               fill

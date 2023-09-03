@@ -31,6 +31,7 @@ export default function Curso({ params }: { params: { slug: string } }) {
         </Heading>
         <div className="relative aspect-[4/3]">
           <Image
+            sizes="(min-width: 780px) 715px, 96.52vw"
             className="object-cover"
             src={imgPath}
             alt={course.title}

@@ -22,7 +22,14 @@ export default function Hero() {
   return (
     <section className="relative bg-black">
       <div className="absolute inset-y-0 right-0 w-full max-w-4xl">
-        <Image className="object-cover" src="/hero.jpg" alt="" priority fill />
+        <Image
+          sizes="(min-width: 960px) 896px, calc(93.13vw + 21px)"
+          className="object-cover"
+          src="/hero.jpg"
+          alt=""
+          priority
+          fill
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-black to-[rgba(0,0,0,0.75)] md:to-[rgba(0,0,0,0.25)]" />
       </div>
       <div className="relative z-10 flex flex-col gap-4 pb-6 sm:gap-8">

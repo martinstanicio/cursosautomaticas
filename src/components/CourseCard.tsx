@@ -14,7 +14,13 @@ export default function CourseCard({
   return (
     <article className="flex flex-col overflow-x-hidden rounded bg-neutral-800 shadow sm:grid sm:grid-cols-5">
       <div className="relative col-span-2 aspect-[4/3] sm:aspect-auto">
-        <Image className="object-cover" src={`/${imgName}.jpg`} alt="" fill />
+        <Image
+          sizes="(min-width: 960px) 339px, (min-width: 640px) calc(30vw + 51px), calc(100vw - 16px)"
+          className="object-cover"
+          src={`/${imgName}.jpg`}
+          alt=""
+          fill
+        />
       </div>
       <div className="col-span-3 flex flex-col gap-y-4 p-4 sm:items-start sm:justify-between">
         <div>
