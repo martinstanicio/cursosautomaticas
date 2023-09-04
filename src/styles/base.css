@@ -1,3 +1,7 @@
 .link:is(:hover, :focus) {
   @apply text-neutral-50 underline;
 }
+
+textarea {
+  resize: vertical;
+}
