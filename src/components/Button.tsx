@@ -50,28 +50,41 @@ const button = cva(
   },
 );
 
-export interface Props
-  extends React.AnchorHTMLAttributes<HTMLAnchorElement>,
-    VariantProps<typeof button> {
+export type Props = VariantProps<typeof button> & (LinkProps | ButtonProps);
+
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  type?: "link";
   href: string;
-}
+};
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  type: "button" | "submit";
+};
 
 export default function Button({
   children,
-  href,
   size,
   intent,
   variant,
   className,
   ...props
 }: Props) {
-  return (
-    <Link
-      href={href}
-      className={twMerge(button({ size, intent, variant, className }))}
-      {...props}
-    >
-      {children}
-    </Link>
-  );
+  const classes = twMerge(button({ size, intent, variant }), className);
+
+  if (props.type === "submit" || props.type === "button") {
+    return (
+      <button {...props} className={classes}>
+        {children}
+      </button>
+    );
+  }
+
+  if (props.type === "link" || props.type === undefined) {
+    const { type, ...propsWithoutType } = props;
+
+    return (
+      <Link {...propsWithoutType} className={classes}>
+        {children}
+      </Link>
+    );
+  }
 }

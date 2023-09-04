@@ -50,7 +50,7 @@ export default function Hero() {
               ¡Regístrate ahora!
             </Button>
             <Button
-              href="#"
+              type="button"
               size="big"
               intent="secondary"
               variant="accent"
