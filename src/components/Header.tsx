@@ -31,16 +31,16 @@ export default function Header({
         {({ open }) => (
           <>
             <div className="lg:hidden">
-              <Menu.Button>
+              <Menu.Button id="headlessui-menu-button">
                 {open ? (
                   <CloseIcon
-                    size={"glyph"}
-                    className="aspect-square w-8 hover:text-neutral-50 focus:text-neutral-50"
+                    size={32}
+                    className="hover:text-neutral-50 focus:text-neutral-50"
                   />
                 ) : (
                   <MenuIcon
-                    size={"glyph"}
-                    className="aspect-square w-8 hover:text-neutral-50 focus:text-neutral-50"
+                    size={32}
+                    className="hover:text-neutral-50 focus:text-neutral-50"
                   />
                 )}
               </Menu.Button>
