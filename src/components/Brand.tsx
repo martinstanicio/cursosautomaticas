@@ -6,16 +6,11 @@ export interface Props {
   textClassName?: string;
 }
 
-export default function Brand({ textClassName = "" }: Props) {
+export default function Brand({ textClassName }: Props) {
   return (
     <Link href="/" className="flex items-center gap-3 sm:gap-4 lg:gap-6">
       <div className="relative aspect-square w-10 sm:w-12 lg:w-14">
-        <Image
-          sizes="(min-width: 1040px) 56px, (min-width: 640px) 48px, 40px"
-          src="/logo.png"
-          alt="logo"
-          fill
-        />
+        <Image sizes="56px" src="/logo.png" alt="logo" fill />
       </div>
       <span
         className={twMerge(
