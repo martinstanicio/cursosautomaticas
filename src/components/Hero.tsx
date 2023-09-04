@@ -46,8 +46,8 @@ export default function Hero() {
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
-            <Button href="#" size="big" intent="primary" variant="accent">
-              ¡Regístrate ahora!
+            <Button href="/cursos" size="big" intent="primary" variant="accent">
+              ¡Inscríbete ahora!
             </Button>
             <Button
               type="button"
