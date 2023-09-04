@@ -17,8 +17,8 @@ export default function FAQ({
           {question}
         </Heading>
         <ChevronRight
-          size="glyph"
-          className="h-4 w-4 text-neutral-50 transition-transform group-open:rotate-90"
+          size={16}
+          className="text-neutral-50 transition-transform group-open:rotate-90"
         />
       </summary>
       <div
