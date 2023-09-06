@@ -6,31 +6,27 @@ export default function Footer() {
     <div className="bg-black">
       <footer className="container mx-auto flex max-w-4xl flex-col gap-12 px-2 py-16 sm:px-4">
         <Brand />
-        <ul className="grid list-none grid-cols-1 gap-y-2 sm:grid-cols-2">
-          <li>
+        <div className="grid grid-cols-1 gap-y-2 sm:grid-cols-2">
+          <div className="flex flex-col gap-y-2">
             <Link href="/cursos" className="link">
               Cursos
             </Link>
-          </li>
-          <li>
-            <Link href="/contacto" className="link">
-              Contacto
-            </Link>
-          </li>
-          <li>
             <Link href="/sobre-nosotros" className="link">
               Sobre nosotros
             </Link>
-          </li>
-          <li>
+          </div>
+          <div className="flex flex-col gap-y-2">
+            <Link href="/contacto" className="link">
+              Contacto
+            </Link>
             <Link
               href="https://www.instagram.com/cursosautomaticas"
               className="link"
             >
               Instagram
             </Link>
-          </li>
-        </ul>
+          </div>
+        </div>
         <ul className="grid list-none grid-cols-1 gap-y-2 sm:grid-cols-2">
           <li>Cursos Automáticas &copy; {new Date().getFullYear()}</li>
           <li>
