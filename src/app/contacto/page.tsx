@@ -37,7 +37,7 @@ export default function Contacto() {
           Email
         </Field>
         <Field textarea id="mensaje" required>
-          Tu mensaje
+          Tu mensaje o consulta
         </Field>
 
         <Button type="submit" intent="primary">
