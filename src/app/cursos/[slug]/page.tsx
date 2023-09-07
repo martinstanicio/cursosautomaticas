@@ -1,10 +1,9 @@
 import Heading from "@/components/Heading";
 import Image from "next/image";
 import Link from "next/link";
+import Section from "@/components/Section";
 import { allCourses } from "contentlayer/generated";
-import { defaultClass as defaultSectionClass } from "@/components/Section";
 import { notFound } from "next/navigation";
-import { twMerge } from "tailwind-merge";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
 export const generateStaticParams = () =>
@@ -25,7 +24,7 @@ export default function Curso({ params }: { params: { slug: string } }) {
 
   return (
     <article>
-      <header className="mx-auto max-w-3xl space-y-4 px-2 py-16 sm:px-4 md:px-8 lg:px-12">
+      <Section as="header" className="max-w-3xl space-y-4">
         <Heading as="h1" size={1}>
           {course.title}
         </Heading>
@@ -39,23 +38,21 @@ export default function Curso({ params }: { params: { slug: string } }) {
             fill
           />
         </div>
-      </header>
+      </Section>
       <Content
         components={{
           section: ({ children, ["data-heading-rank"]: headingRank }: any) => {
             switch (Number(headingRank)) {
               case 2:
                 return (
-                  <div
-                    className="even:bg-black"
+                  <Section
+                    intent="black"
+                    frequency="even"
+                    className="max-w-3xl"
                     style={{ counterIncrement: "section" }}
-                  >
-                    <section
-                      className={twMerge(defaultSectionClass, "max-w-3xl")}
                     >
                       {children}
-                    </section>
-                  </div>
+                  </Section>
                 );
               case 3:
                 return (

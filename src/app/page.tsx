@@ -26,7 +26,7 @@ export default function Home() {
     <>
       <Hero />
       <Section
-        black
+        intent="black"
         className="flex flex-col justify-center gap-x-6 gap-y-10 py-6 sm:flex-row sm:justify-around"
       >
         <Stat value="35+">años reparando cajas automáticas</Stat>
@@ -63,7 +63,10 @@ export default function Home() {
             </Benefit>
           </div>
         </Section>
-        <Section black className="flex max-w-5xl flex-col gap-12 md:flex-row">
+        <Section
+          intent="black"
+          className="flex max-w-5xl flex-col gap-12 md:flex-row"
+        >
           <div className="flex-1 space-y-8">
             <Heading as="h2" size={2}>
               Conoce a Carlos Grosso, nuestro especialista
@@ -111,7 +114,7 @@ export default function Home() {
             Ver todos los cursos
           </Button>
         </Section>
-        {/* <Section black className="flex max-w-5xl flex-col gap-12">
+        {/* <Section intent="black" className="flex max-w-5xl flex-col gap-12">
           <Heading as="h2" size={2} className="text-center">
             Las opiniones de nuestros alumnos
           </Heading>
@@ -125,7 +128,10 @@ export default function Home() {
             ))}
           </div>
         </Section> */}
-        <Section black className="flex max-w-4xl flex-col items-center gap-12">
+        <Section
+          intent="black"
+          className="flex max-w-4xl flex-col items-center gap-12"
+        >
           <Heading as="h2" size={2}>
             Preguntas frecuentes (FAQ)
           </Heading>
