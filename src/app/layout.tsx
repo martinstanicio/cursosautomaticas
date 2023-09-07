@@ -1,3 +1,5 @@
+"use client";
+
 import "@/styles/main.css";
 
 import { Nunito, Play } from "next/font/google";
@@ -5,6 +7,8 @@ import { Nunito, Play } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+import { getEnv } from "@/env";
 import { twMerge } from "tailwind-merge";
 
 const headings = Play({
@@ -56,7 +60,11 @@ export default function RootLayout({
     <html lang="es" className={twMerge(body.variable, headings.variable)}>
       <body className="bg-neutral-900 font-body leading-relaxed text-neutral-300">
         <Header hideOnHome />
-        {children}
+        <PayPalScriptProvider
+          options={{ clientId: getEnv("NEXT_PUBLIC_PAYPAL_CLIENT_ID") }}
+        >
+          {children}
+        </PayPalScriptProvider>
         <Footer />
       </body>
     </html>
