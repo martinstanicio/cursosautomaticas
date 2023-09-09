@@ -4,7 +4,7 @@ import {
   Education,
   RecentlyViewed,
 } from "@carbon/icons-react";
-import { allCourses, allFAQs, allTestimonies } from "contentlayer/generated";
+import { allCourses, allFAQs } from "contentlayer/generated";
 
 import Benefit from "@/components/Benefit";
 import Button from "@/components/Button";
@@ -15,7 +15,6 @@ import Hero from "@/components/Hero";
 import Image from "next/image";
 import Section from "@/components/Section";
 import Stat from "@/components/Stat";
-import Testimony from "@/components/Testimony";
 
 export default function Home() {
   const filteredCourses = allCourses
