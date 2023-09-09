@@ -14,7 +14,9 @@ export const generateStaticParams = () =>
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const course = allCourses.find((c) => c.slug === params.slug);
   if (!course) notFound();
-  return { title: course.title };
+
+  const { title, description } = course;
+  return { title, description };
 }
 
 export default function Curso({ params }: { params: { slug: string } }) {

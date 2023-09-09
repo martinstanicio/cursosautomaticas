@@ -3,8 +3,15 @@
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
 import Link from "next/link";
+import type { Metadata } from "next";
 import Section from "@/components/Section";
 import { useEffect } from "react";
+
+export const metadata: Metadata = {
+  title: "Error",
+  description:
+    "Hubo un error con la página, por favor vuelva a intentaro. Si el problema persiste, intentelo más tarde o realize un reclamo.",
+};
 
 export default function Error({
   error,

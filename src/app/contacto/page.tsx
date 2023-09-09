@@ -1,7 +1,14 @@
 import Button from "@/components/Button";
 import Field from "@/components/Field";
 import Heading from "@/components/Heading";
+import type { Metadata } from "next";
 import Section from "@/components/Section";
+
+export const metadata: Metadata = {
+  title: "Contacto",
+  description:
+    "Su opinión y consultas son de gran importancia para nosotros. Le invitamos a completar el formulario a continuación y nos comprometemos a responder en la brevedad.",
+};
 
 export default function Contacto() {
   return (
