@@ -1,17 +1,20 @@
 "use client";
 
+import { usePathname, useRouter } from "next/navigation";
+
 import type { Course } from "contentlayer/generated";
 import { PayPalButtons } from "@paypal/react-paypal-js";
-import { useState } from "react";
 
 export default function Checkout({
   title,
   price,
 }: Pick<Course, "title" | "price">) {
-  const [isPurchased, setIsPurchased] = useState(false);
+  const pathname = usePathname();
+  const { push } = useRouter();
 
-  const CheckoutButtons = (
+  return (
     <PayPalButtons
+      className="min-h-[13rem] rounded bg-white p-4 text-neutral-900"
       style={{ color: "black" }}
       createOrder={(data, actions) => {
         return actions.order.create({
@@ -26,26 +29,8 @@ export default function Checkout({
       }}
       onApprove={async (data, actions) => {
         const order = await actions.order?.capture();
-        if (order?.status === "COMPLETED") {
-          setIsPurchased(true);
-        }
+        if (order?.status === "COMPLETED") push(`${pathname}/comprado`);
       }}
     />
-  );
-
-  const CheckoutSuccess = (
-    <>
-      <p>Su compra ha sido realizada con éxito.</p>
-      <p>
-        Nos comunicaremos con usted mediante email para informarle sobre el
-        curso en la brevedad.
-      </p>
-    </>
-  );
-
-  return (
-    <div className="min-h-[13rem] rounded bg-white p-4 text-neutral-900">
-      {!isPurchased ? CheckoutButtons : CheckoutSuccess}
-    </div>
   );
 }
