@@ -25,19 +25,21 @@ export default function Curso({ params }: { params: { slug: string } }) {
   return (
     <article>
       <Section as="header" className="max-w-3xl space-y-4">
-        <Heading as="h1" size={1}>
+        <Heading as="h1" size={2}>
           {course.title}
         </Heading>
-        <div className="relative aspect-[4/3]">
+        <div className="relative aspect-[4/3] overflow-hidden rounded">
           <Image
             sizes="(min-width: 780px) 715px, 96.52vw"
-            className="object-cover"
+            className="object-cover object-center"
             src={imgPath}
             alt={course.title}
             priority
             fill
           />
         </div>
+        <p>{course.description}</p>
+        <Datetime datetime={new Date(course.datetime)} />
       </Section>
       <Content
         components={{
