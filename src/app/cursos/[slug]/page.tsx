@@ -1,3 +1,5 @@
+import Checkout from "@/components/Checkout";
+import Datetime from "@/components/Datetime";
 import Heading from "@/components/Heading";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,27 +21,34 @@ export default function Curso({ params }: { params: { slug: string } }) {
   const course = allCourses.find((c) => c.slug === params.slug);
   if (!course) notFound();
 
+  const { title, description, datetime, price, slug } = course;
   const Content = useMDXComponent(course.body.code);
-  const imgPath = `/${course._raw.sourceFileDir}/${course.slug}.jpg`;
+  const imgPath = `/${course._raw.sourceFileDir}/${slug}.jpg`;
 
   return (
     <article>
       <Section as="header" className="max-w-3xl space-y-4">
         <Heading as="h1" size={2}>
-          {course.title}
+          {title}
         </Heading>
         <div className="relative aspect-[4/3] overflow-hidden rounded">
           <Image
             sizes="(min-width: 780px) 715px, 96.52vw"
             className="object-cover object-center"
             src={imgPath}
-            alt={course.title}
+            alt={title}
             priority
             fill
           />
         </div>
-        <p>{course.description}</p>
-        <Datetime datetime={new Date(course.datetime)} />
+        <p>{description}</p>
+        <Datetime datetime={new Date(datetime)} />
+      </Section>
+      <Section intent="accent" className="max-w-3xl space-y-4">
+        <Heading as="h2" size={2}>
+          ¡Inscribite ya!
+        </Heading>
+        <Checkout title={title} price={price} />
       </Section>
       <Content
         components={{
@@ -52,8 +61,8 @@ export default function Curso({ params }: { params: { slug: string } }) {
                     frequency="even"
                     className="max-w-3xl"
                     style={{ counterIncrement: "section" }}
-                    >
-                      {children}
+                  >
+                    {children}
                   </Section>
                 );
               case 3:
