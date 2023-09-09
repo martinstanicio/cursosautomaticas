@@ -25,6 +25,15 @@ export default function Curso({ params }: { params: { slug: string } }) {
   const Content = useMDXComponent(course.body.code);
   const imgPath = `/${course._raw.sourceFileDir}/${slug}.jpg`;
 
+  const CheckoutSection = () => (
+    <Section intent="accent" className="max-w-3xl space-y-4">
+      <Heading as="h2" size={2}>
+        ¡Inscribite ya!
+      </Heading>
+      <Checkout title={title} price={price} />
+    </Section>
+  );
+
   return (
     <article>
       <Section as="header" className="max-w-3xl space-y-4">
@@ -44,12 +53,7 @@ export default function Curso({ params }: { params: { slug: string } }) {
         <p>{description}</p>
         <Datetime datetime={new Date(datetime)} />
       </Section>
-      <Section intent="accent" className="max-w-3xl space-y-4">
-        <Heading as="h2" size={2}>
-          ¡Inscribite ya!
-        </Heading>
-        <Checkout title={title} price={price} />
-      </Section>
+      <CheckoutSection />
       <Content
         components={{
           section: ({ children, ["data-heading-rank"]: headingRank }: any) => {
@@ -103,6 +107,7 @@ export default function Curso({ params }: { params: { slug: string } }) {
           ),
         }}
       />
+      <CheckoutSection />
     </article>
   );
 }
