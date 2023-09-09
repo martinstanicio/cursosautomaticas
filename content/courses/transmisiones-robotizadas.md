@@ -11,31 +11,25 @@ Destinado a talleristas mecánicos automotor en calidad de ½ oficial o superior
 
 ## Finalidad u objetivos del curso
 
-Proveer a los participantes, el conocimiento y cuidados necesarios para: identificar el sistema; ubicar y manipular sus componentes; conocer su función y estado; chequear parámetros de desgaste y funcionamiento; efectuar diagnósticos visuales, intuitivos y con instrumental; desmontar y montar los diferentes sistemas de manera segura; y proveer del mantenimiento requerido en cada situación (control de niveles y cambios de aceite y filtros). Lubricantes requeridos y recomendados para el correcto funcionamiento y duración de la transmisión.
+Proveer a los participantes, el conocimiento y cuidados necesarios para: identificar el sistema; ubicar y manipular sus componentes; conocer su función y estado; chequear parámetros de desgaste y funcionamiento; efectuar diagnósticos visuales, intuitivos y con instrumental; desmontar y montar los diferentes sistemas robóticos de manera segura; y proveer del mantenimiento requerido en cada situación (control de niveles y cambios de aceite y filtros). Lubricantes requeridos y recomendados para el correcto funcionamiento y duración de la transmisión robotizada.
 
 ## Contenidos
 
 ### Módulo A
 
-1. ¿Por qué una transmisión? Defectos y falencias del motor de combustión interna.
-2. Conceptos básicos que definen a una transmisión.
-3. ¿Torque o potencia?
-4. Compensación dinámica: volante bimasa.
-5. Transmisión de par.
-6. Sistemas de acoplamiento: embrague monodisco seco, embrague doble, convertidor de par.
-7. Debate, consultas, evaluación y nivelación de los participantes del curso.
-8. Concepto de transmisión automática.
+1. Concepto y aplicación de la **robótica** en el sistema de transmisión.
+2. Leyes que rigen el sistema e inhabilitan su funcionamiento.
+3. Reconocimiento y diferenciación de transmisiones robotizadas de embrague simple; I Motion – Dualogic – Easytronic. Marcas y modelos que las utilizan; comparativos de ventajas y limitaciones respecto a los sistemas de transmisión manual y automática convencional.
+4. Debate, consultas, evaluación y nivelación de los participantes del curso.
 
 ### Módulo B
 
-1. Primeros sistemas de transmisión.
-2. Diferenciación y reconocimiento de los diferentes sistemas de transmisión automática.
-3. Concepto CVT (Transmisión Variable Continua). Ventajas y desventajas.
-4. Elementos mecánicos, hidráulicos, eléctricos y electrónicos.
-5. Gestión del cambio; información, evaluación y reacción; módulos de control; comunicación; intervención del conductor; cambio secuencial.
-6. Sensores y actuadores; función, reconocimiento y ubicación.
-7. Desmontaje y montaje; cuidados y precauciones básicas. Controles y revisión antes de reponer el sistema.
-8. Debate e intercambio de consultas, evaluación y nivelación del curso.
+1. Principios de funcionamiento; sistemas involucrados; componentes activos y pasivos.
+2. Elementos mecánicos, hidráulicos, eléctricos y electrónicos.
+3. Gestión del cambio; información, evaluación y reacción; módulos de control; comunicación; intervención del conductor; cambio secuencial.
+4. Sensores y actuadores; función, reconocimiento y ubicación.
+5. Desmontaje y montaje de transmisiones robotizadas; cuidados y precauciones básicas. Controles y revisión antes de reponer el sistema.
+6. Debate e intercambio de consultas, evaluación y nivelación del curso.
 
 ### Módulo C
 
@@ -43,7 +37,7 @@ Proveer a los participantes, el conocimiento y cuidados necesarios para: identif
 2. Chequeo de funciones básicas; control de funcionamiento y atención al usuario.
 3. Uso específico de Scanner para lectura de fallas y ajustes básicos del sistema.
 4. Evaluación de la gravedad de los defectos encontrados; conveniencia y limitaciones en una eventual reparación; componentes de reemplazo requeridos.
-5. Nivelación y evaluación final, aporte de experiencias o incursiones de los participantes con el objeto de enriquecer y fijar los conocimientos adquiridos.
+5. Nivelación y evalución final, aporte de experiencias o incursiones de los participantes con el objeto de enriquecer y fijar los conocimientos adquiridos.
 
 ## Duración
 
