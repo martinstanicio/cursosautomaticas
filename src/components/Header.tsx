@@ -33,15 +33,21 @@ export default function Header({
             <div className="lg:hidden">
               <Menu.Button id="headlessui-menu-button">
                 {open ? (
-                  <CloseIcon
-                    size={32}
-                    className="hover:text-neutral-50 focus:text-neutral-50"
-                  />
+                  <>
+                    <CloseIcon
+                      size={32}
+                      className="hover:text-neutral-50 focus:text-neutral-50"
+                    />
+                    <span className="sr-only">Close menu</span>
+                  </>
                 ) : (
-                  <MenuIcon
-                    size={32}
-                    className="hover:text-neutral-50 focus:text-neutral-50"
-                  />
+                  <>
+                    <MenuIcon
+                      size={32}
+                      className="hover:text-neutral-50 focus:text-neutral-50"
+                    />
+                    <span className="sr-only">Open menu</span>
+                  </>
                 )}
               </Menu.Button>
               <Transition
@@ -55,7 +61,7 @@ export default function Header({
                 <Menu.Items
                   static
                   as={"nav"}
-                  className="absolute right-0 mt-2 flex w-64 origin-top-right flex-col gap-6 bg-neutral-800 p-6 font-bold uppercase shadow before:absolute before:-top-2 before:right-2 before:h-0 before:w-0 before:border-x-8 before:border-b-8 before:border-x-transparent before:border-b-neutral-800"
+                  className="absolute right-0 mt-2 flex w-64 origin-top-right flex-col gap-6 bg-neutral-900 p-6 font-bold uppercase shadow before:absolute before:-top-2 before:right-2 before:h-0 before:w-0 before:border-x-8 before:border-b-8 before:border-x-transparent before:border-b-neutral-900"
                 >
                   <Menu.Item>
                     {({ active }) => (

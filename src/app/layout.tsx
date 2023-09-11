@@ -55,7 +55,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={twMerge(body.variable, headings.variable)}>
-      <body className="bg-neutral-900 font-body leading-relaxed text-neutral-300">
+      <body className="bg-neutral-950 font-body leading-relaxed text-neutral-300">
         <Header hideOnHome />
         <Providers>{children}</Providers>
         <Footer />

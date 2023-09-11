@@ -13,7 +13,7 @@ const button = cva(
       },
       intent: {
         primary: "text-neutral-50 border-transparent",
-        secondary: "border-current hover:bg-neutral-900 focus:bg-neutral-900",
+        secondary: "border-current",
       },
       variant: {
         accent: "",
@@ -29,7 +29,8 @@ const button = cva(
       {
         intent: "secondary",
         variant: "accent",
-        className: "text-accent-500",
+        className:
+          "text-accent-500 hover:text-accent-600 focus:text-accent-600",
       },
       {
         intent: "primary",
