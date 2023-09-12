@@ -1,12 +1,21 @@
-import Checkout from "@/components/Checkout";
+import Button from "@/components/Button";
 import Datetime from "@/components/Datetime";
 import Heading from "@/components/Heading";
 import Image from "next/image";
 import Link from "next/link";
 import Section from "@/components/Section";
 import { allCourses } from "contentlayer/generated";
+import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 import { useMDXComponent } from "next-contentlayer/hooks";
+
+const DynamicCheckout = dynamic(() => import("@/components/Checkout"), {
+  loading: () => (
+    <div className="min-h-[13rem] rounded bg-white p-4 text-neutral-900">
+      <p>Cargando...</p>
+    </div>
+  ),
+});
 
 export const generateStaticParams = () =>
   allCourses.map(({ slug }) => ({ slug }));
@@ -27,15 +36,6 @@ export default function Curso({ params }: { params: { slug: string } }) {
   const Content = useMDXComponent(course.body.code);
   const imgPath = `/${course._raw.sourceFileDir}/${slug}.jpg`;
 
-  const CheckoutSection = () => (
-    <Section intent="accent" className="max-w-3xl space-y-4">
-      <Heading as="h2" size={2}>
-        ¡Inscribite ya!
-      </Heading>
-      <Checkout title={title} price={price} />
-    </Section>
-  );
-
   return (
     <article>
       <Section as="header" className="max-w-3xl space-y-4">
@@ -53,9 +53,13 @@ export default function Curso({ params }: { params: { slug: string } }) {
           />
         </div>
         <p>{description}</p>
-        <Datetime datetime={new Date(datetime)} />
+        <div className="flex flex-col-reverse gap-4 sm:flex-row">
+          <Button href="#checkout" intent="primary" className="flex-shrink-0">
+            ¡Inscribite ahora!
+          </Button>
+          <Datetime datetime={new Date(datetime)} />
+        </div>
       </Section>
-      <CheckoutSection />
       <Content
         components={{
           section: ({ children, ["data-heading-rank"]: headingRank }: any) => {
@@ -109,7 +113,17 @@ export default function Curso({ params }: { params: { slug: string } }) {
           ),
         }}
       />
-      <CheckoutSection />
+
+      <Section
+        intent="accent"
+        className="max-w-3xl scroll-mt-24 space-y-4"
+        id="checkout"
+      >
+        <Heading as="h2" size={2}>
+          ¡Inscribite ahora!
+        </Heading>
+        <DynamicCheckout title={title} price={price} />
+      </Section>
     </article>
   );
 }

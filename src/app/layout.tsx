@@ -5,7 +5,6 @@ import { Nunito, Play } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
-import Providers from "@/components/Providers";
 import { twMerge } from "tailwind-merge";
 
 const headings = Play({
@@ -54,10 +53,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={twMerge(body.variable, headings.variable)}>
+    <html
+      lang="es"
+      className={twMerge(body.variable, headings.variable, "scroll-smooth")}
+    >
       <body className="bg-neutral-950 font-body leading-relaxed text-neutral-300">
         <Header hideOnHome />
-        <Providers>{children}</Providers>
+        {children}
         <Footer />
       </body>
     </html>
