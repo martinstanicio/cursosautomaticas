@@ -64,8 +64,17 @@ export default function Home() {
         </Section>
         <Section
           intent="black"
-          className="flex max-w-5xl flex-col gap-12 md:flex-row"
+          className="flex max-w-5xl flex-col gap-12 md:flex-row-reverse"
         >
+          <div className="relative aspect-[4/3] flex-1 border-4 border-accent-500">
+            <Image
+              sizes="(min-width: 1060px) 436px, (min-width: 780px) 40.77vw, 96.52vw"
+              src="/carlosgrosso.jpg"
+              alt=""
+              fill
+              className="object-cover"
+            />
+          </div>
           <div className="flex-1 space-y-8">
             <Heading as="h2" size={2}>
               Conoce a Carlos Grosso, nuestro especialista
@@ -89,15 +98,6 @@ export default function Home() {
             <Button href="#" size="small">
               Leer más
             </Button>
-          </div>
-          <div className="relative aspect-[4/3] flex-1 border-4 border-accent-500">
-            <Image
-              sizes="(min-width: 1060px) 436px, (min-width: 780px) 40.77vw, 96.52vw"
-              src="/carlosgrosso.jpg"
-              alt=""
-              fill
-              className="object-cover"
-            />
           </div>
         </Section>
         <Section className="flex max-w-4xl flex-col items-center gap-12">
