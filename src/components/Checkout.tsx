@@ -22,7 +22,7 @@ export default function Checkout({
           return actions.order.create({
             purchase_units: [
               {
-                amount: { value: price.toString() },
+                amount: { value: price.toString(), currency_code: "USD" },
                 description: title,
               },
             ],

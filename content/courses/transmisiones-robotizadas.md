@@ -1,7 +1,7 @@
 ---
 title: Transmisiones robotizadas
-price: 500
-datetime: 2023-09-01T14:00-03:00
+price: 180
+datetime: 2023-11-20T19:00-03:00
 description: Adéntrate en el emocionante universo de las transmisiones robotizadas y descubre cómo la innovadora tecnología automatiza el cambio de velocidades en los vehículos.
 ---
 
