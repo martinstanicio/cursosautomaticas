@@ -2,12 +2,11 @@ import Button from "@/components/Button";
 import Datetime from "@/components/Datetime";
 import Heading from "@/components/Heading";
 import Image from "next/image";
-import Link from "next/link";
+import MDXContent from "@/components/MDXContent";
 import Section from "@/components/Section";
 import { allCourses } from "contentlayer/generated";
 import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
-import { useMDXComponent } from "next-contentlayer/hooks";
 
 const DynamicCheckout = dynamic(() => import("@/components/Checkout"), {
   loading: () => (
@@ -33,7 +32,6 @@ export default function Curso({ params }: { params: { slug: string } }) {
   if (!course) notFound();
 
   const { title, description, datetime, price, slug } = course;
-  const Content = useMDXComponent(course.body.code);
   const imgPath = `/${course._raw.sourceFileDir}/${slug}.jpg`;
 
   return (
@@ -60,59 +58,7 @@ export default function Curso({ params }: { params: { slug: string } }) {
           <Datetime datetime={new Date(datetime)} />
         </div>
       </Section>
-      <Content
-        components={{
-          section: ({ children, ["data-heading-rank"]: headingRank }: any) => {
-            switch (Number(headingRank)) {
-              case 2:
-                return (
-                  <Section
-                    intent="black"
-                    frequency="even"
-                    className="max-w-3xl"
-                    style={{ counterIncrement: "section" }}
-                  >
-                    {children}
-                  </Section>
-                );
-              case 3:
-                return (
-                  <div className="mt-8 first-of-type:mt-0">{children}</div>
-                );
-
-              default:
-                return children;
-            }
-          },
-          a: ({ href, children }) => (
-            <Link href={href as string}>{children}</Link>
-          ),
-          h2: ({ children }) => (
-            <Heading
-              as="h2"
-              size={2}
-              className="pb-[1em] before:text-accent-500 before:content-[counter(section)_'._']"
-            >
-              {children}
-            </Heading>
-          ),
-          h3: ({ children }) => (
-            <Heading as="h3" size={3} className="pb-[1em] text-accent-500">
-              {children}
-            </Heading>
-          ),
-          ol: ({ children }) => (
-            <ol className="list-decimal ps-6 marker:font-bold marker:text-accent-500">
-              {children}
-            </ol>
-          ),
-          ul: ({ children }) => (
-            <ul className="list-square ps-6 marker:text-accent-500">
-              {children}
-            </ul>
-          ),
-        }}
-      />
+      <MDXContent code={course.body.code} />
 
       <Section
         intent="accent"
