@@ -16,23 +16,34 @@ const DynamicCheckout = dynamic(() => import("@/components/Checkout"), {
   ),
 });
 
-export const generateStaticParams = () =>
-  allCourses.map(({ slug }) => ({ slug }));
+function findCourse(slug: string) {
+  const course = allCourses.find((c) => c.slug === slug);
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const course = allCourses.find((c) => c.slug === params.slug);
   if (!course) notFound();
 
-  const { title, description } = course;
+  return course;
+}
+
+export function generateStaticParams() {
+  return allCourses.map(({ slug }) => ({ slug }));
+}
+
+export interface Props {
+  params: ReturnType<typeof generateStaticParams>[0];
+}
+
+export function generateMetadata({ params }: Props) {
+  const { title, description } = findCourse(params.slug);
+
   return { title, description };
 }
 
-export default function Curso({ params }: { params: { slug: string } }) {
-  const course = allCourses.find((c) => c.slug === params.slug);
-  if (!course) notFound();
+export default function Curso({ params }: Props) {
+  const { title, description, datetime, price, ...course } = findCourse(
+    params.slug,
+  );
 
-  const { title, description, datetime, price, slug } = course;
-  const imgPath = `/${course._raw.sourceFileDir}/${slug}.jpg`;
+  const imgSrc = `/${course._raw.sourceFileDir}/${course.slug}.jpg`;
 
   return (
     <article>
@@ -44,7 +55,7 @@ export default function Curso({ params }: { params: { slug: string } }) {
           <Image
             sizes="(min-width: 780px) 715px, 96.52vw"
             className="object-cover object-center"
-            src={imgPath}
+            src={imgSrc}
             alt={title}
             priority
             fill
@@ -58,6 +69,7 @@ export default function Curso({ params }: { params: { slug: string } }) {
           <Datetime datetime={new Date(datetime)} />
         </div>
       </Section>
+
       <MDXContent code={course.body.code} />
 
       <Section
