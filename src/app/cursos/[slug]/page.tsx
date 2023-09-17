@@ -9,6 +9,7 @@ import Datetime from "@/components/Datetime";
 import Heading from "@/components/Heading";
 import MDXContent from "@/components/MDXContent";
 import Section from "@/components/Section";
+import Slider from "@/components/Slider";
 
 const DynamicCheckout = dynamic(() => import("@/components/Checkout"), {
   loading: () => (
@@ -52,18 +53,7 @@ export default function Curso({ params }: Props) {
           {title}
         </Heading>
 
-        {images.map((src, i) => (
-          <div className="relative aspect-[4/3]" key={i}>
-            <Image
-              sizes="(min-width: 780px) 715px, 96.52vw"
-              className="object-cover object-center"
-              src={src}
-              alt={title}
-              priority
-              fill
-            />
-          </div>
-        ))}
+        <Slider images={images} title={title} />
 
         <p>{description}</p>
         <div className="flex flex-col-reverse gap-4 sm:flex-row">
