@@ -14,7 +14,7 @@ export default function CourseCard({
   images,
 }: Course) {
   return (
-    <article className="flex flex-col overflow-x-hidden rounded bg-neutral-900 shadow sm:grid sm:grid-cols-5">
+    <article className="flex flex-col overflow-x-hidden bg-neutral-900 shadow sm:grid sm:grid-cols-5">
       <div className="relative col-span-2 aspect-[4/3] sm:aspect-auto">
         <Image
           sizes="(min-width: 960px) 339px, (min-width: 640px) calc(30vw + 51px), calc(100vw - 16px)"
