@@ -1,8 +1,10 @@
-import Button from "./Button";
+import Image from "next/image";
+
 import type { Course } from "contentlayer/generated";
+
+import Button from "./Button";
 import Datetime from "./Datetime";
 import Heading from "./Heading";
-import Image from "next/image";
 
 export default function CourseCard({
   title,

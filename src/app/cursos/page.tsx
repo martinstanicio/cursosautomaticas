@@ -1,8 +1,10 @@
+import type { Metadata } from "next";
+
+import { allCourses } from "contentlayer/generated";
+
 import CourseCard from "@/components/CourseCard";
 import Heading from "@/components/Heading";
-import type { Metadata } from "next";
 import Section from "@/components/Section";
-import { allCourses } from "contentlayer/generated";
 
 export const metadata: Metadata = {
   title: "Cursos",

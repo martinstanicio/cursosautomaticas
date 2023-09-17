@@ -1,6 +1,7 @@
 "use client";
 
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+
 import { getEnv } from "@/env";
 
 export default function PayPalProvider({

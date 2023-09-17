@@ -1,7 +1,7 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files";
-
-import type { LocalDocument } from "contentlayer/source-files";
 import sectionize from "@hbsnow/rehype-sectionize";
+
+import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import type { LocalDocument } from "contentlayer/source-files";
 
 export const Course = defineDocumentType(() => ({
   name: "Course",

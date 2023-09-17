@@ -1,6 +1,8 @@
-import Image from "next/image";
-import type { Testimony } from "contentlayer/generated";
 import { twMerge } from "tailwind-merge";
+
+import Image from "next/image";
+
+import type { Testimony as TTestimony } from "contentlayer/generated";
 
 export default function Testimony({
   name,
@@ -8,7 +10,7 @@ export default function Testimony({
   body: { html: content },
   _raw: { flattenedPath: avatar },
   className,
-}: Testimony & {
+}: TTestimony & {
   className?: string;
 }) {
   return (

@@ -1,8 +1,10 @@
+import { notFound } from "next/navigation";
+
+import { allCourses } from "contentlayer/generated";
+
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
 import Section from "@/components/Section";
-import { allCourses } from "contentlayer/generated";
-import { notFound } from "next/navigation";
 
 export const generateStaticParams = () =>
   allCourses.map(({ slug }) => ({ slug }));

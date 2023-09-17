@@ -1,11 +1,11 @@
-import "@/styles/main.css";
+import { twMerge } from "tailwind-merge";
 
+import type { Metadata } from "next";
 import { Nunito, Play } from "next/font/google";
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import type { Metadata } from "next";
-import { twMerge } from "tailwind-merge";
+import "@/styles/main.css";
 
 const headings = Play({
   variable: "--font-headings",

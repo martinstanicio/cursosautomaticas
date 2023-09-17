@@ -1,7 +1,9 @@
-import Heading from "./Heading";
-import Link from "next/link";
-import Section from "./Section";
 import { useMDXComponent } from "next-contentlayer/hooks";
+
+import Link from "next/link";
+
+import Heading from "./Heading";
+import Section from "./Section";
 
 export default function MDXContent({ code }: { code: string }) {
   const Content = useMDXComponent(code);

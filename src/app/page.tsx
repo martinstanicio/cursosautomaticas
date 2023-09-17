@@ -4,6 +4,9 @@ import {
   Education,
   RecentlyViewed,
 } from "@carbon/icons-react";
+
+import Image from "next/image";
+
 import { allCourses, allFAQs } from "contentlayer/generated";
 
 import Benefit from "@/components/Benefit";
@@ -12,7 +15,6 @@ import CourseCard from "@/components/CourseCard";
 import FAQ from "@/components/FAQ";
 import Heading from "@/components/Heading";
 import Hero from "@/components/Hero";
-import Image from "next/image";
 import Section from "@/components/Section";
 import Stat from "@/components/Stat";
 

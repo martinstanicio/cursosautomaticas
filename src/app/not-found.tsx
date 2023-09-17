@@ -1,7 +1,8 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
-import Link from "next/link";
-import type { Metadata } from "next";
 import Section from "@/components/Section";
 
 export const metadata: Metadata = { title: "404 | Cursos Automáticas" };

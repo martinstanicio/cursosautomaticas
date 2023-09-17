@@ -1,12 +1,14 @@
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import { notFound } from "next/navigation";
+
+import { allCourses } from "contentlayer/generated";
+
 import Button from "@/components/Button";
 import Datetime from "@/components/Datetime";
 import Heading from "@/components/Heading";
-import Image from "next/image";
 import MDXContent from "@/components/MDXContent";
 import Section from "@/components/Section";
-import { allCourses } from "contentlayer/generated";
-import dynamic from "next/dynamic";
-import { notFound } from "next/navigation";
 
 const DynamicCheckout = dynamic(() => import("@/components/Checkout"), {
   loading: () => (

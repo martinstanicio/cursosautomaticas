@@ -1,12 +1,14 @@
 "use client";
 
 import { Dialog, Transition } from "@headlessui/react";
+
 import { Fragment, useState } from "react";
+
+import Image from "next/image";
 
 import Button from "./Button";
 import Header from "./Header";
 import Heading from "./Heading";
-import Image from "next/image";
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);

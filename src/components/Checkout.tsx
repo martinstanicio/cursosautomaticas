@@ -1,9 +1,11 @@
 "use client";
 
+import { PayPalButtons } from "@paypal/react-paypal-js";
+
 import { usePathname, useRouter } from "next/navigation";
 
 import type { Course } from "contentlayer/generated";
-import { PayPalButtons } from "@paypal/react-paypal-js";
+
 import PayPalProvider from "@/providers/PayPal";
 
 export default function Checkout({

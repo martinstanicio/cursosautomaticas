@@ -1,4 +1,5 @@
 import type { CarbonIconType } from "@carbon/icons-react";
+
 import Heading from "./Heading";
 
 export default function Benefit({

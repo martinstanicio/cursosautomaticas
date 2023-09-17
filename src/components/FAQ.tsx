@@ -1,6 +1,8 @@
 import { ChevronRight } from "@carbon/icons-react";
-import Heading from "./Heading";
+
 import type { FAQ as _FAQ } from "contentlayer/generated";
+
+import Heading from "./Heading";
 
 export default function FAQ({
   title: question,

@@ -2,12 +2,13 @@
 
 import { Close as CloseIcon, Menu as MenuIcon } from "@carbon/icons-react";
 import { Menu, Transition } from "@headlessui/react";
+import { twMerge } from "tailwind-merge";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import Brand from "./Brand";
 import Button from "./Button";
-import Link from "next/link";
-import { twMerge } from "tailwind-merge";
-import { usePathname } from "next/navigation";
 
 export default function Header({
   className = "",

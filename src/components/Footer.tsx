@@ -1,5 +1,6 @@
-import Brand from "./Brand";
 import Link from "next/link";
+
+import Brand from "./Brand";
 
 export default function Footer() {
   return (

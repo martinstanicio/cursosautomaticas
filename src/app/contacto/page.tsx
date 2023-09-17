@@ -1,7 +1,8 @@
+import type { Metadata } from "next";
+
 import Button from "@/components/Button";
 import Field from "@/components/Field";
 import Heading from "@/components/Heading";
-import type { Metadata } from "next";
 import Section from "@/components/Section";
 
 export const metadata: Metadata = {

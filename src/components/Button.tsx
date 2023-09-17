@@ -1,6 +1,7 @@
-import Link from "next/link";
-import { cva, type VariantProps } from "class-variance-authority";
+import { type VariantProps, cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
+
+import Link from "next/link";
 
 const button = cva(
   "border-2.5 inline-block cursor-pointer px-[1.5em] py-[0.75em] text-center font-bold uppercase shadow outline-offset-4 transition-colors duration-100 w-full sm:w-auto",
