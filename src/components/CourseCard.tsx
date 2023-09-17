@@ -11,7 +11,7 @@ export default function CourseCard({
   description,
   url,
   datetime,
-  _raw: { flattenedPath: imgName },
+  images,
 }: Course) {
   return (
     <article className="flex flex-col overflow-x-hidden rounded bg-neutral-900 shadow sm:grid sm:grid-cols-5">
@@ -19,7 +19,7 @@ export default function CourseCard({
         <Image
           sizes="(min-width: 960px) 339px, (min-width: 640px) calc(30vw + 51px), calc(100vw - 16px)"
           className="object-cover"
-          src={`/${imgName}.jpg`}
+          src={images[0]}
           alt=""
           fill
         />

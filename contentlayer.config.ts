@@ -12,6 +12,7 @@ export const Course = defineDocumentType(() => ({
     description: { type: "string", required: true },
     datetime: { type: "date", required: true },
     price: { type: "number", required: true },
+    images: { type: "list", required: true, of: { type: "string" } },
   },
   computedFields: {
     slug: {

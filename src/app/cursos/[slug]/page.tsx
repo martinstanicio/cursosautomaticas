@@ -41,11 +41,9 @@ export function generateMetadata({ params }: Props) {
 }
 
 export default function Curso({ params }: Props) {
-  const { title, description, datetime, price, ...course } = findCourse(
+  const { title, description, datetime, price, images, ...course } = findCourse(
     params.slug,
   );
-
-  const imgSrc = `/${course._raw.sourceFileDir}/${course.slug}.jpg`;
 
   return (
     <article>
@@ -53,16 +51,20 @@ export default function Curso({ params }: Props) {
         <Heading as="h1" size={2}>
           {title}
         </Heading>
-        <div className="relative aspect-[4/3]">
-          <Image
-            sizes="(min-width: 780px) 715px, 96.52vw"
-            className="object-cover object-center"
-            src={imgSrc}
-            alt={title}
-            priority
-            fill
-          />
-        </div>
+
+        {images.map((src, i) => (
+          <div className="relative aspect-[4/3]" key={i}>
+            <Image
+              sizes="(min-width: 780px) 715px, 96.52vw"
+              className="object-cover object-center"
+              src={src}
+              alt={title}
+              priority
+              fill
+            />
+          </div>
+        ))}
+
         <p>{description}</p>
         <div className="flex flex-col-reverse gap-4 sm:flex-row">
           <Button href="#checkout" intent="primary" className="flex-shrink-0">
