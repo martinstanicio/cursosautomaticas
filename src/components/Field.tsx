@@ -1,48 +1,74 @@
 import { twMerge } from "tailwind-merge";
 
-export type Props = {
-  children: React.ReactNode;
-} & (InputProps | TextareaProps);
+import {
+  InputHTMLAttributes,
+  ReactNode,
+  TextareaHTMLAttributes,
+  forwardRef,
+} from "react";
 
-type InputProps = {
-  textarea?: false;
-} & React.InputHTMLAttributes<HTMLInputElement>;
+const defaultClassName =
+  "block w-full rounded border-2 border-accent-500 bg-neutral-900 px-4 py-2 shadow";
 
-type TextareaProps = {
-  textarea: true;
-} & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
+type LabelProps = {
+  htmlFor: string;
+  required?: boolean;
+  children: ReactNode;
+};
 
-export default function Field({ children, ...props }: Props) {
-  const classes = twMerge(
-    "block w-full rounded border-2 border-accent-500 bg-neutral-900 px-4 py-2 shadow",
-    props.className,
-  );
-  let FieldElement;
-
-  if (props.textarea) {
-    const { textarea, ...propsWithoutTextarea } = props;
-    FieldElement = (
-      <textarea name={props.id} {...propsWithoutTextarea} className={classes} />
-    );
-  } else {
-    const { textarea, ...propsWithoutTextarea } = props;
-    FieldElement = (
-      <input name={props.id} {...propsWithoutTextarea} className={classes} />
-    );
-  }
-
+function Label({ htmlFor, required, children }: LabelProps) {
   return (
-    <div>
-      <label
-        htmlFor={props.id}
-        className={twMerge(
-          "block",
-          props.required && "after:text-red-500 after:content-['*']",
-        )}
-      >
-        {children}
-      </label>
-      {FieldElement}
-    </div>
+    <label
+      htmlFor={htmlFor}
+      className={twMerge(
+        "block",
+        required && "after:text-red-500 after:content-['*']",
+      )}
+    >
+      {children}
+    </label>
   );
 }
+
+export type Props = {
+  children: ReactNode;
+  id: string;
+};
+
+export const Input = forwardRef<
+  HTMLInputElement,
+  Props & InputHTMLAttributes<HTMLInputElement>
+>(function InputComponent({ children, className, id, ...props }, ref) {
+  return (
+    <div>
+      <Label htmlFor={id} required={props.required}>
+        {children}
+      </Label>
+      <input
+        ref={ref}
+        id={id}
+        className={twMerge(defaultClassName, className)}
+        {...props}
+      />
+    </div>
+  );
+});
+
+export const TextArea = forwardRef<
+  HTMLTextAreaElement,
+  Props & TextareaHTMLAttributes<HTMLTextAreaElement>
+>(function TextAreaComponent({ children, className, id, ...props }, ref) {
+  return (
+    <div>
+      <Label htmlFor={id} required={props.required}>
+        {children}
+      </Label>
+      <textarea
+        ref={ref}
+        id={id}
+        className={twMerge(defaultClassName, className)}
+        {...props}
+      />
+    </div>
+  );
+});

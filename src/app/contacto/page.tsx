@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import Button from "@/components/Button";
-import Field from "@/components/Field";
+import { Input, TextArea } from "@/components/Field";
 import Heading from "@/components/Heading";
 import Section from "@/components/Section";
 
@@ -25,7 +25,7 @@ export default function Contacto() {
         </p>
       </div>
       <form className="space-y-4">
-        <Field
+        <Input
           type="text"
           id="nombre"
           placeholder="Juan Perez"
@@ -34,8 +34,8 @@ export default function Contacto() {
           autoFocus
         >
           Nombre
-        </Field>
-        <Field
+        </Input>
+        <Input
           type="email"
           id="email"
           placeholder="juan@gmail.com"
@@ -43,10 +43,10 @@ export default function Contacto() {
           autoComplete="email"
         >
           Email
-        </Field>
-        <Field textarea id="mensaje" required>
+        </Input>
+        <TextArea id="mensaje" required>
           Tu mensaje o consulta
-        </Field>
+        </TextArea>
 
         <Button type="submit" intent="primary">
           Enviar
