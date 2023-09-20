@@ -8,7 +8,7 @@ const section = cva(
       intent: {
         default: "bg-transparent shadow-none",
         black: "bg-black shadow-black",
-        accent: "bg-accent-600 shadow-accent-600",
+        accent: "bg-accent-600 shadow-accent-600 text-neutral-50",
       },
       frequency: {
         all: "",
