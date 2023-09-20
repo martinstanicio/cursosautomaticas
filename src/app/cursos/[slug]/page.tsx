@@ -71,7 +71,7 @@ export default function Curso({ params }: Props) {
         id="checkout"
       >
         <Heading as="h2" size={2}>
-          Proximamente...
+          Próximamente...
         </Heading>
         <p>
           La inscripción a nuestros cursos todavía no está disponible, te
