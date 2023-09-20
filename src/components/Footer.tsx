@@ -12,14 +12,11 @@ export default function Footer() {
             <Link href="/cursos" className="link">
               Cursos
             </Link>
-            <Link href="/sobre-nosotros" className="link">
-              Sobre nosotros
-            </Link>
-          </div>
-          <div className="flex flex-col gap-y-2">
             <Link href="/contacto" className="link">
               Contacto
             </Link>
+          </div>
+          <div className="flex flex-col gap-y-2">
             <Link
               href="https://www.instagram.com/cursosautomaticas"
               className="link"

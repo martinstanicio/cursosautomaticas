@@ -14,7 +14,7 @@ Destinado a talleristas mecánicos automotor en calidad de ½ oficial o superior
 
 ## Finalidad u objetivos del curso
 
-Proveer a los participantes, el conocimiento y cuidados necesarios para: identificar el sistema; ubicar y manipular sus componentes; conocer su función y estado; chequear parámetros de desgaste y funcionamiento; efectuar diagnósticos visuales, intuitivos y con instrumental; desmontar y montar los diferentes sistemas robóticos de manera segura; y proveer del mantenimiento requerido en cada situación (control de niveles y cambios de aceite y filtros). Lubricantes requeridos y recomendados para el correcto funcionamiento y duración de la transmisión robotizada.
+Proveer a los participantes, el conocimiento y cuidados necesarios para: identificar el sistema; ubicar y manipular sus componentes; conocer su función y estado; chequear parámetros de desgaste y funcionamiento; efectuar diagnósticos visuales, intuitivos y con instrumental; desmontar y montar los diferentes sistemas robóticos de manera segura y proveer del mantenimiento requerido en cada sistema (control de niveles y cambios de aceite y filtros). Lubricantes requeridos y recomendados para el correcto funcionamiento y duración de la transmisión robotizada.
 
 ## Contenidos
 
@@ -22,7 +22,7 @@ Proveer a los participantes, el conocimiento y cuidados necesarios para: identif
 
 1. Concepto y aplicación de la **robótica** en el sistema de transmisión.
 2. Leyes que rigen el sistema e inhabilitan su funcionamiento.
-3. Reconocimiento y diferenciación de transmisiones robotizadas de embrague simple; I Motion – Dualogic – Easytronic. Marcas y modelos que las utilizan; comparativos de ventajas y limitaciones respecto a los sistemas de transmisión manual y automática convencional.
+3. Reconocimiento y diferenciación de transmisiones robotizadas de embrague simple; I MOTION – DUALOGIC – EASYTRONIC. Marcas y modelos que las utilizan; comparativos de ventajas y limitaciones respecto a los sistemas de transmisión manual y automática convencional.
 4. Debate, consultas, evaluación y nivelación de los participantes del curso.
 
 ### Módulo B
@@ -56,3 +56,11 @@ El curso se divide en 3 (tres) clases de 3 horas cada una, con una duración tot
 ## Condiciones de cursado
 
 Dadas las características del curso y su carácter de fijación de conocimiento progresivo, se requiere la totalidad de asistencia al mismo (tres clases completas).
+
+## Docente a cargo
+
+Dictado por: **Carlos Grosso**
+
+Formación y participación en el departamento de desarrollo técnico de FORD MOTORS ARGENTINA, asesor de perfeccionamiento técnico en TRINTER S.A. e IMPERIAL CORD, ZAPATER DIAZ ICSA.
+
+Actualmente titular de HIDRAULICA INTERIOR, empresa dedicada a la reparación y fabricación de repuestos para direcciones hidráulicas, y de TAG TRANSMISIONES, dedicada a la reparación de transmisiones automáticas y robotizadas.

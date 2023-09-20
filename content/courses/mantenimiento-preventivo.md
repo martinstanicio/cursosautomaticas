@@ -13,7 +13,7 @@ Destinado a talleristas, mecánicos y auxiliares automotor, relacionados con los
 
 ## Finalidad u objetivos del curso
 
-Proveer a los participantes, el conocimiento y cuidados necesarios para realizar un eficiente servicio de mantenimiento preventivo, identificando los diferentes sistemas de transmisión automática; elegir correctamente el fluido y filtros necesarios, conocer su función y estado, controlar niveles y realizar cambios por medio de un barrido interno (**flushing**) para lograr la máxima duración de una transmisión automática.
+Proveer a los participantes, el conocimiento y cuidados necesarios para realizar un eficiente servicio de mantenimiento preventivo, identificando los diferentes sistemas de transmisión automática; elegir correctamente el fluido y filtros necesarios, conocer su función y estado, controlar niveles y realizar cambios por medio de un barrido interno (_flushing_) para lograr la máxima duración de una transmisión automática.
 
 ## Contenidos
 
@@ -49,8 +49,21 @@ El curso se divide en 3 (tres) clases de 3 horas cada una, con una duración tot
 
 ## Requisitos de ingreso
 
-- Conocimiento de mecánica general: motores, embrague, cajas de velocidad, etc.
-- Experiencia en el uso de instrumentos de medición y diagnóstico: Scanner, multímetro, etc.
+Conocimiento de mecánica general: motores, embrague, cajas de velocidad, etc.
+
+Experiencia en el uso de instrumentos de medición y diagnóstico: Scanner, multímetro, etc.
+
+## Condiciones de cursado
+
+Dadas las características del curso y su carácter de fijación de conocimiento progresivo, se requiere la totalidad de asistencia al mismo (tres módulos completos).
+
+## Docente a cargo
+
+Dictado por: **Carlos Grosso**
+
+Formación y participación en el departamento de desarrollo técnico de FORD MOTORS ARGENTINA, asesor de perfeccionamiento técnico en TRINTER S.A. e IMPERIAL CORD, ZAPATER DIAZ ICSA.
+
+Actualmente titular de HIDRAULICA INTERIOR, empresa dedicada a la reparación y fabricación de repuestos para direcciones hidráulicas, y de TAG TRANSMISIONES, dedicada a la reparación de transmisiones automáticas y robotizadas.
 
 ## Nota
 
