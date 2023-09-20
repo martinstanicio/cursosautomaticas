@@ -1,4 +1,4 @@
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 
 import { allCourses } from "contentlayer/generated";
@@ -10,13 +10,13 @@ import MDXContent from "@/components/MDXContent";
 import Section from "@/components/Section";
 import Slider from "@/components/Slider";
 
-const DynamicCheckout = dynamic(() => import("@/components/Checkout"), {
-  loading: () => (
-    <div className="min-h-[13rem] rounded bg-white p-4 text-neutral-900">
-      <p>Cargando...</p>
-    </div>
-  ),
-});
+// const DynamicCheckout = dynamic(() => import("@/components/Checkout"), {
+//   loading: () => (
+//     <div className="min-h-[13rem] rounded bg-white p-4 text-neutral-900">
+//       <p>Cargando...</p>
+//     </div>
+//   ),
+// });
 
 function findCourse(slug: string) {
   const course = allCourses.find((c) => c.slug === slug);
@@ -71,9 +71,13 @@ export default function Curso({ params }: Props) {
         id="checkout"
       >
         <Heading as="h2" size={2}>
-          ¡Inscribite ahora!
+          Proximamente...
         </Heading>
-        <DynamicCheckout title={title} price={price} />
+        <p>
+          La inscripción a nuestros cursos todavía no está disponible, te
+          recomendamos que te mantengas alerta para no perder esta oportunidad.
+        </p>
+        {/* <DynamicCheckout title={title} price={price} /> */}
       </Section>
     </article>
   );
