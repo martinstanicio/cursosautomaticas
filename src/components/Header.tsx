@@ -67,16 +67,6 @@ export default function Header({
                   <Menu.Item>
                     {({ active }) => (
                       <Link
-                        href="/sobre-nosotros"
-                        className={twMerge(active && "text-neutral-50")}
-                      >
-                        Sobre nosotros
-                      </Link>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <Link
                         href="/contacto"
                         className={twMerge(active && "text-neutral-50")}
                       >
@@ -101,14 +91,6 @@ export default function Header({
             </div>
             <nav className="hidden lg:block">
               <ul className="flex items-center gap-6 font-bold uppercase">
-                <li>
-                  <Link
-                    href="/sobre-nosotros"
-                    className="hover:text-neutral-50 focus:text-neutral-50"
-                  >
-                    Sobre nosotros
-                  </Link>
-                </li>
                 <li>
                   <Link
                     href="/contacto"
