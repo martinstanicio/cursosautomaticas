@@ -87,7 +87,7 @@ export default function Hero() {
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
-                  <Dialog.Panel className="aspect-video w-full max-w-lg transform overflow-hidden rounded bg-black shadow transition-all">
+                  <Dialog.Panel className="aspect-video w-full max-w-lg transform bg-black shadow transition-all">
                     <video
                       tabIndex={0}
                       src="/hero.mp4"
