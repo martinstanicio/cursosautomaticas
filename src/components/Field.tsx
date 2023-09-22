@@ -8,7 +8,7 @@ import {
 } from "react";
 
 const defaultClassName =
-  "block w-full rounded border-2 border-accent-500 bg-neutral-900 px-4 py-2 shadow";
+  "block w-full border-2 border-accent-500 bg-neutral-900 px-4 py-2 shadow";
 
 type LabelProps = {
   htmlFor: string;

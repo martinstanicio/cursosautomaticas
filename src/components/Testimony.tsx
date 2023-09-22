@@ -16,7 +16,7 @@ export default function Testimony({
   return (
     <article
       className={twMerge(
-        "flex flex-col items-center gap-6 rounded bg-neutral-900 px-4 py-12 shadow",
+        "flex flex-col items-center gap-6 bg-neutral-900 px-4 py-12 shadow",
         className,
       )}
     >

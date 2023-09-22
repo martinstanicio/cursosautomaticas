@@ -12,7 +12,7 @@ import Slider from "@/components/Slider";
 
 // const DynamicCheckout = dynamic(() => import("@/components/Checkout"), {
 //   loading: () => (
-//     <div className="min-h-[13rem] rounded bg-white p-4 text-neutral-900">
+//     <div className="min-h-[13rem] bg-white p-4 text-neutral-900">
 //       <p>Cargando...</p>
 //     </div>
 //   ),

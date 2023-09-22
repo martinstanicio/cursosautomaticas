@@ -18,7 +18,7 @@ export default function Checkout({
   return (
     <PayPalProvider>
       <PayPalButtons
-        className="min-h-[13rem] rounded bg-white p-4 text-neutral-900"
+        className="min-h-[13rem] bg-white p-4 text-neutral-900"
         style={{ color: "black" }}
         createOrder={(data, actions) => {
           return actions.order.create({
