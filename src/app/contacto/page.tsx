@@ -24,10 +24,11 @@ export default function Contacto() {
           a responder en la brevedad.
         </p>
       </div>
-      <form className="space-y-4">
+      <form action="/api/contact" method="POST" className="space-y-4">
         <Input
           type="text"
-          id="nombre"
+          id="name"
+          name="name"
           placeholder="Juan Perez"
           required
           autoComplete="name"
@@ -38,13 +39,14 @@ export default function Contacto() {
         <Input
           type="email"
           id="email"
+          name="email"
           placeholder="juan@gmail.com"
           required
           autoComplete="email"
         >
           Email
         </Input>
-        <TextArea id="mensaje" required>
+        <TextArea id="message" name="message" required>
           Tu mensaje o consulta
         </TextArea>
 
