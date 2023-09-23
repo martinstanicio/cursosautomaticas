@@ -9,7 +9,7 @@ import Section from "@/components/Section";
 export const generateStaticParams = () =>
   allCourses.map(({ slug }) => ({ slug }));
 
-export default function Comprado({ params }: { params: { slug: string } }) {
+export default function Waitlist({ params }: { params: { slug: string } }) {
   const course = allCourses.find((c) => c.slug === params.slug);
   if (!course) notFound();
 
