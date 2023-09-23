@@ -97,9 +97,6 @@ export default function Home() {
                 <strong>desbloquear nuevas oportunidades</strong> en tu carrera.
               </p>
             </div>
-            <Button href="#" size="small">
-              Leer más
-            </Button>
           </div>
         </Section>
         <Section className="flex max-w-4xl flex-col items-center gap-12">
