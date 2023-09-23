@@ -24,7 +24,7 @@ export default function Contacto() {
           a responder en la brevedad.
         </p>
       </div>
-      <form action="/api/contact" method="POST" className="space-y-4">
+      <form action="/api/contact" className="space-y-4">
         <Input
           type="text"
           id="name"

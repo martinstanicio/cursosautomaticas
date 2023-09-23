@@ -3,11 +3,12 @@ import { kv } from "@vercel/kv";
 import { redirect } from "next/navigation";
 import { NextResponse } from "next/server";
 
-export async function POST(request: Request) {
-  const formData = await request.formData();
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const message = formData.get("message");
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+
+  const name = searchParams.get("name");
+  const email = searchParams.get("email");
+  const message = searchParams.get("message");
 
   try {
     if (!name || !email || !message) {

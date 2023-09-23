@@ -81,7 +81,7 @@ export default function Curso({ params }: Props) {
           La inscripción a nuestros cursos todavía no está disponible, te
           recomendamos que te mantengas alerta para no perder esta oportunidad.
         </p>
-        <form action="/api/waitlist" method="POST" className="space-y-4">
+        <form action="/api/waitlist" className="space-y-4">
           <input type="hidden" name="slug" value={course.slug} />
           <Input type="email" id="email" name="email">
             Email
