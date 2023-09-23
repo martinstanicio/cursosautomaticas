@@ -1,10 +1,10 @@
-// import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 
 import { allCourses } from "contentlayer/generated";
 
 import Button from "@/components/Button";
 import Datetime from "@/components/Datetime";
+import { Input } from "@/components/Field";
 import Heading from "@/components/Heading";
 import MDXContent from "@/components/MDXContent";
 import Section from "@/components/Section";
@@ -57,10 +57,14 @@ export default function Curso({ params }: Props) {
         <p>{description}</p>
         <div className="flex flex-col-reverse gap-4 sm:flex-row">
           <Button href="#checkout" intent="primary" className="flex-shrink-0">
-            ¡Inscribite ahora!
+            Sumate a la lista de espera
           </Button>
           <Datetime datetime={new Date(datetime)} />
         </div>
+        <p>
+          Cupos limitados, ¡no pierdas la oportunidad! Sumate a la lista de
+          espera para mantenerte en contacto.
+        </p>
       </Section>
 
       <MDXContent code={course.body.code} />
@@ -71,12 +75,21 @@ export default function Curso({ params }: Props) {
         id="checkout"
       >
         <Heading as="h2" size={2}>
-          Próximamente...
+          Lista de espera
         </Heading>
         <p>
           La inscripción a nuestros cursos todavía no está disponible, te
           recomendamos que te mantengas alerta para no perder esta oportunidad.
         </p>
+        <form action="/api/waitlist" method="POST" className="space-y-4">
+          <input type="hidden" name="slug" value={course.slug} />
+          <Input type="email" id="email" name="email">
+            Email
+          </Input>
+          <Button type="submit" intent="primary" variant="black">
+            Enviar
+          </Button>
+        </form>
         {/* <DynamicCheckout title={title} price={price} /> */}
       </Section>
     </article>
