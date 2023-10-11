@@ -38,7 +38,7 @@ export default function Home() {
           <Heading as="h2" size={2} className="text-center">
             ¿Por qué elegir Cursos Automáticas?
           </Heading>
-          <div className="grid place-items-center justify-center gap-10 sm:grid-cols-2 sm:gap-y-16">
+          <div className="grid justify-items-center gap-10 sm:grid-cols-2 sm:gap-y-16">
             <Benefit icon={Education} title="Clases con un experto">
               De la mano de <strong>Carlos Grosso</strong> y su equipo de
               expertos, recibirás una orientación personalizada a lo largo de tu
