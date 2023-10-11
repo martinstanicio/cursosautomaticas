@@ -39,12 +39,13 @@ export default function Hero() {
         <div className="container mx-auto flex flex-col gap-12 px-2 sm:px-4 md:px-8 lg:px-12">
           <div className="flex flex-col gap-3">
             <Heading as="h1" size={1} className="max-w-2xl lg:text-6xl">
-              Conduce la excelencia en tu aprendizaje con{" "}
-              <span className="text-accent-600">Cursos Automáticas</span>
+              Potencia tus habilidades con cursos profesionales en{" "}
+              <span className="text-accent-600">cajas automáticas</span>
             </Heading>
             <p className="max-w-[36ch]">
               Aprende de la experiencia de nuestro equipo de profesionales en
-              cajas automáticas, liderado por <strong>Carlos Grosso</strong>.
+              transmisiones automáticas, liderado por{" "}
+              <strong>Carlos Grosso</strong>.
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
