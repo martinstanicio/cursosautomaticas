@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   title: "Contacto",
   description:
     "Su opinión y consultas son de gran importancia para nosotros. Le invitamos a completar el formulario a continuación y nos comprometemos a responder en la brevedad.",
+  alternates: { canonical: "/contacto" },
+  openGraph: { url: "/contacto" },
 };
 
 export default function Contacto() {

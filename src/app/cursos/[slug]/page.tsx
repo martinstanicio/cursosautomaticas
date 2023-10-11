@@ -35,9 +35,14 @@ export interface Props {
 }
 
 export function generateMetadata({ params }: Props) {
-  const { title, description } = findCourse(params.slug);
+  const { title, description, url } = findCourse(params.slug);
 
-  return { title, description };
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { url },
+  };
 }
 
 export default function Curso({ params }: Props) {

@@ -1,6 +1,5 @@
 import { twMerge } from "tailwind-merge";
 
-import type { Metadata } from "next";
 import { Nunito, Play } from "next/font/google";
 
 import Footer from "@/components/Footer";
@@ -15,41 +14,13 @@ const headings = Play({
 });
 const body = Nunito({ variable: "--font-body", subsets: ["latin"] });
 
-const siteName = "Cursos Automáticas";
-const description =
-  "Conduce la excelencia en tu aprendizaje con Cursos Automáticas";
-const themeColor = "#ef4444";
+export { metadata } from "../metadata";
 
-// TODO add images to metadata
-// * https://nextjs.org/docs/app/building-your-application/optimizing/metadata#dynamic-image-generation
-// const images = "";
-
-export const metadata: Metadata = {
-  title: {
-    template: `%s | ${siteName}`,
-    default: siteName,
-  },
-  description,
-  themeColor,
-  colorScheme: "dark",
-  creator: "Martín Stanicio",
-  generator: "Next.js",
-  openGraph: {
-    siteName,
-    title: siteName,
-    description,
-    type: "website",
-    locale: "es_ES",
-    url: "https://www.cursosautomaticas.com/",
-    // images,
-  },
-};
-
-export default function RootLayout({
-  children,
-}: {
+export interface Props {
   children: React.ReactNode;
-}) {
+}
+
+export default function RootLayout({ children }: Props) {
   return (
     <html
       lang="es"

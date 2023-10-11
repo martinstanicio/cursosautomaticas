@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   title: "Cursos",
   description:
     "Aquí podrás encontrar todos nuestros cursos y su fecha de realización. Puedes encontrar información adicional en la página de cada curso.",
+  alternates: { canonical: "/cursos" },
+  openGraph: { url: "/cursos" },
 };
 
 export default function Cursos() {
