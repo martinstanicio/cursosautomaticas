@@ -5,6 +5,7 @@ import { Nunito, Play } from "next/font/google";
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import CountryProvider from "@/providers/Country";
 import "@/styles/main.css";
 
 const headings = Play({
@@ -58,9 +59,11 @@ export default function RootLayout({
       className={twMerge(body.variable, headings.variable, "scroll-smooth")}
     >
       <body className="bg-neutral-950 font-body leading-relaxed text-neutral-300">
-        <Header hideOnHome />
-        {children}
-        <Footer />
+        <CountryProvider>
+          <Header hideOnHome />
+          {children}
+          <Footer />
+        </CountryProvider>
       </body>
     </html>
   );
