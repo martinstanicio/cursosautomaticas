@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 
 const siteName = "Cursos Automáticas";
-const title =
-  "Potencia tus habilidades con cursos profesionales en cajas automáticas";
+const title = `${siteName}: Potencia tus habilidades con cursos profesionales en cajas automáticas`;
 const description =
   "Aprende de la experiencia de nuestro equipo de profesionales en transmisiones automáticas, liderado por Carlos Grosso.";
 const themeColor = "#ef4444";
