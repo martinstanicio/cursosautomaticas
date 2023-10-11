@@ -24,9 +24,6 @@ const themeColor = "#ef4444";
 // * https://nextjs.org/docs/app/building-your-application/optimizing/metadata#dynamic-image-generation
 // const images = "";
 
-// TODO add url to metadata
-// const url = "";
-
 export const metadata: Metadata = {
   title: {
     template: `%s | ${siteName}`,
@@ -43,7 +40,7 @@ export const metadata: Metadata = {
     description,
     type: "website",
     locale: "es_ES",
-    // url,
+    url: "https://www.cursosautomaticas.com/",
     // images,
   },
 };
