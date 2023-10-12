@@ -60,11 +60,17 @@ export default function Curso({ params }: Props) {
         <Slider images={images} title={title} />
 
         <p>{description}</p>
-        <div className="flex flex-col-reverse gap-4 sm:flex-row">
-          <Button href="#checkout" intent="primary" className="flex-shrink-0">
-            Sumate a la lista de espera
-          </Button>
-          <Datetime datetime={new Date(datetime)} />
+        <div className="space-y-2">
+          <div className="flex flex-col-reverse gap-4 sm:flex-row">
+            <Button href="#checkout" intent="primary" className="flex-shrink-0">
+              Sumate a la lista de espera
+            </Button>
+            <Datetime datetime={new Date(datetime)} />
+          </div>
+          <p className="text-sm text-red-600">
+            La fecha es tentativa y está sujeta a posibles modificaciones hasta
+            que se abran las inscripciones.
+          </p>
         </div>
         <p>
           Cupos limitados, ¡no pierdas la oportunidad! Sumate a la lista de
