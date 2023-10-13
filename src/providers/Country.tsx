@@ -14,7 +14,7 @@ export default function CountryProvider({ children }: Props) {
   const UNAVAILABLE_COUNTRIES = getEnv("UNAVAILABLE_COUNTRIES").split(",");
 
   const headersList = headers();
-  const country = headersList.get("X-Country");
+  const country = headersList.get("X-Country-Name");
 
   if (typeof country !== "string") return children;
   if (!UNAVAILABLE_COUNTRIES.includes(country)) return children;
