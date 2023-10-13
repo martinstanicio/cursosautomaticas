@@ -28,7 +28,8 @@ export default function CountryProvider({ children }: Props) {
     <Section as="main" className="flex flex-col items-center gap-4 text-center">
       <Brand />
       <p>
-        Esta plataforma no está disponible en {formattedUnavailableCountries}.
+        Lo sentimos, esta plataforma no está disponible en{" "}
+        {formattedUnavailableCountries}.
       </p>
     </Section>
   );
