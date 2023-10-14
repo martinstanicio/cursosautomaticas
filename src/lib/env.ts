@@ -1,4 +1,5 @@
 const env = {
+  ADMIN_ID: process.env.ADMIN_ID,
   NEXT_PUBLIC_PAYPAL_CLIENT_ID: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID,
   UNAVAILABLE_COUNTRIES: process.env.UNAVAILABLE_COUNTRIES,
 } as const;
