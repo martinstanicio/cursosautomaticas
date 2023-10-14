@@ -6,12 +6,13 @@ export const config = {
 };
 
 export async function middleware({ ip }: NextRequest) {
+  const response = NextResponse.next();
+
+  if (process.env.NODE_ENV !== "production") return response;
+
   const res = await fetch(`https://ipapi.co/${ip}/country_name`);
   const country = await res.text();
+  response.headers.append("X-Country-Name", country);
 
-  const headers = new Headers({
-    "X-Country-Name": country,
-  });
-
-  return NextResponse.next({ headers });
+  return response;
 }

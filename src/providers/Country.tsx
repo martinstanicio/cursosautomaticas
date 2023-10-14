@@ -9,14 +9,11 @@ export interface Props {
 }
 
 export default function CountryProvider({ children }: Props) {
-  if (process.env.NODE_ENV !== "production") return children;
-
-  const UNAVAILABLE_COUNTRIES = getEnv("UNAVAILABLE_COUNTRIES").split(",");
-
   const headersList = headers();
   const country = headersList.get("X-Country-Name");
+  if (!country) return children;
 
-  if (typeof country !== "string") return children;
+  const UNAVAILABLE_COUNTRIES = getEnv("UNAVAILABLE_COUNTRIES").split(",");
   if (!UNAVAILABLE_COUNTRIES.includes(country)) return children;
 
   const listFormatter = new Intl.ListFormat("es");
