@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 
-import { allCourses } from "contentlayer/generated";
-
 import CourseCard from "@/components/CourseCard";
 import Heading from "@/components/Heading";
 import Section from "@/components/Section";
+import { sortedCourses } from "@/lib/courses";
 
 export const metadata: Metadata = {
   title: "Cursos",
@@ -15,8 +14,6 @@ export const metadata: Metadata = {
 };
 
 export default function Cursos() {
-  const courses = allCourses.sort();
-
   return (
     <Section as="main" className="max-w-4xl space-y-8">
       <div className="space-y-2">
@@ -29,7 +26,7 @@ export default function Cursos() {
         </p>
       </div>
       <div className="space-y-4">
-        {courses.map((course, i) => (
+        {sortedCourses.map((course, i) => (
           <CourseCard key={i} {...course} />
         ))}
       </div>

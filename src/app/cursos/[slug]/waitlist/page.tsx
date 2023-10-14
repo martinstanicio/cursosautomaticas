@@ -1,17 +1,12 @@
-import { notFound } from "next/navigation";
-
-import { allCourses } from "contentlayer/generated";
-
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
 import Section from "@/components/Section";
+import { allCoursesSlugs, findCourse } from "@/lib/courses";
 
-export const generateStaticParams = () =>
-  allCourses.map(({ slug }) => ({ slug }));
+export const generateStaticParams = () => allCoursesSlugs;
 
 export default function Waitlist({ params }: { params: { slug: string } }) {
-  const course = allCourses.find((c) => c.slug === params.slug);
-  if (!course) notFound();
+  const course = findCourse(params.slug);
 
   return (
     <Section as="main" className="max-w-4xl space-y-8">

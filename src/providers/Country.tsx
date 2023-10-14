@@ -2,7 +2,7 @@ import { headers } from "next/headers";
 
 import Brand from "@/components/Brand";
 import Section from "@/components/Section";
-import { getEnv } from "@/env";
+import { getEnv } from "@/lib/env";
 
 export interface Props {
   children: React.ReactNode;

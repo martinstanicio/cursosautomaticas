@@ -2,7 +2,7 @@
 
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
-import { getEnv } from "@/env";
+import { getEnv } from "@/lib/env";
 
 export default function PayPalProvider({
   children,

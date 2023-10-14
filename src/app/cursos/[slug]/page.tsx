@@ -1,7 +1,3 @@
-import { notFound } from "next/navigation";
-
-import { allCourses } from "contentlayer/generated";
-
 import Button from "@/components/Button";
 import Datetime from "@/components/Datetime";
 import { Input } from "@/components/Field";
@@ -9,6 +5,7 @@ import Heading from "@/components/Heading";
 import MDXContent from "@/components/MDXContent";
 import Section from "@/components/Section";
 import Slider from "@/components/Slider";
+import { allCoursesSlugs, findCourse } from "@/lib/courses";
 
 // const DynamicCheckout = dynamic(() => import("@/components/Checkout"), {
 //   loading: () => (
@@ -18,20 +15,10 @@ import Slider from "@/components/Slider";
 //   ),
 // });
 
-function findCourse(slug: string) {
-  const course = allCourses.find((c) => c.slug === slug);
-
-  if (!course) notFound();
-
-  return course;
-}
-
-export function generateStaticParams() {
-  return allCourses.map(({ slug }) => ({ slug }));
-}
+export const generateStaticParams = () => allCoursesSlugs;
 
 export interface Props {
-  params: ReturnType<typeof generateStaticParams>[0];
+  params: (typeof allCoursesSlugs)[0];
 }
 
 export function generateMetadata({ params }: Props) {

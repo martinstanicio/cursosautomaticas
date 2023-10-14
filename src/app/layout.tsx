@@ -14,7 +14,7 @@ const headings = Play({
 });
 const body = Nunito({ variable: "--font-body", subsets: ["latin"] });
 
-export { metadata } from "../metadata";
+export { metadata } from "@/lib/metadata";
 
 export interface Props {
   children: React.ReactNode;
