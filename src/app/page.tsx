@@ -97,9 +97,15 @@ export default function Home() {
           </div>
         </Section>
         <Section className="flex max-w-4xl flex-col items-center gap-12">
-          <Heading as="h2" size={2}>
-            Próximos cursos
-          </Heading>
+          <div className="space-y-2 text-center">
+            <Heading as="h2" size={2}>
+              Próximos cursos
+            </Heading>
+            <p className="text-accent-500">
+              Los cupos son limitados, se recomienda inscribirse con
+              anticipación para asegurar tu participación.
+            </p>
+          </div>
           <div className="space-y-4">
             {upcomingCourses.map((course, i) => (
               <CourseCard key={i} {...course} />

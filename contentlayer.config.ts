@@ -10,7 +10,7 @@ export const Course = defineDocumentType(() => ({
   fields: {
     title: { type: "string", required: true },
     description: { type: "string", required: true },
-    datetime: { type: "date", required: true },
+    datetime: { type: "date" },
     price: { type: "number", required: true },
     images: { type: "list", required: true, of: { type: "string" } },
   },

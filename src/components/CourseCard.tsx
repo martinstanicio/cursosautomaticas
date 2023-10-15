@@ -33,7 +33,9 @@ export default function CourseCard({
             {description}
           </p>
         </div>
-        <Datetime datetime={new Date(datetime)} />
+        <div className="w-full">
+          {!!datetime && <Datetime datetime={new Date(datetime)} />}
+        </div>
         <Button href={url} size="small">
           Ver curso
         </Button>

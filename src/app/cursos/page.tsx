@@ -21,8 +21,12 @@ export default function Cursos() {
           Nuestros Cursos
         </Heading>
         <p>
-          Aquí podrás encontrar todos nuestros cursos y su fecha de realización.
-          Puedes encontrar información adicional en la página de cada curso.
+          Estos son los cursos a realizarse próximamente. Puedes encontrar
+          información detallada sobre cada uno en su página específica.
+        </p>
+        <p className="text-accent-500">
+          Los cupos son limitados, se recomienda inscribirse con anticipación
+          para asegurar tu participación.
         </p>
       </div>
       <div className="space-y-4">
