@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col gap-y-2">
             <Link
-              href="https://www.instagram.com/cursosautomaticas"
+              href="https://www.instagram.com/cursos_automaticas"
               className="link"
             >
               Instagram
