@@ -23,6 +23,12 @@ export default function Footer() {
             >
               Instagram
             </Link>
+            <Link
+              href="https://www.facebook.com/profile.php?id=61552512632250&mibextid=ZbWKwL"
+              className="link"
+            >
+              Facebook
+            </Link>
           </div>
         </div>
         <ul className="grid list-none grid-cols-1 gap-y-2 sm:grid-cols-2">
