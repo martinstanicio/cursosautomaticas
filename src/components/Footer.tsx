@@ -18,10 +18,16 @@ export default function Footer() {
           </div>
           <div className="flex flex-col gap-y-2">
             <Link
-              href="https://www.instagram.com/cursosautomaticas"
+              href="https://www.instagram.com/cursos_automaticas"
               className="link"
             >
               Instagram
+            </Link>
+            <Link
+              href="https://www.facebook.com/profile.php?id=61552512632250&mibextid=ZbWKwL"
+              className="link"
+            >
+              Facebook
             </Link>
           </div>
         </div>
