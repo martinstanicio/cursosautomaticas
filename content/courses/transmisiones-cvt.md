@@ -5,6 +5,7 @@ price: 500
 description: Descubre el apasionante mundo de las transmisiones automáticas CVT y conviértete en un experto en su funcionamiento y mantenimiento.
 images:
   - /courses/transmisiones-cvt-00.jpg
+  - /courses/transmisiones-cvt-01.jpg
 ---
 
 ## Destinatarios
