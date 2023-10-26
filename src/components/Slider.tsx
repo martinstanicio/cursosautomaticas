@@ -17,7 +17,7 @@ function ImageElement({ src, alt }: { src: string; alt: string }) {
     <div className="relative aspect-[4/3]">
       <Image
         sizes="(min-width: 780px) 715px, 96.52vw"
-        className="object-cover object-center"
+        className="bg-black object-cover object-center"
         src={src}
         alt={alt}
         priority
