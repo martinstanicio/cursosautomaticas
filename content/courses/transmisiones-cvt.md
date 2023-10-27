@@ -6,6 +6,7 @@ description: Descubre el apasionante mundo de las transmisiones automáticas CVT
 images:
   - /courses/transmisiones-cvt-00.jpg
   - /courses/transmisiones-cvt-01.jpg
+  - /courses/transmisiones-cvt-02.jpg
 ---
 
 ## Destinatarios
