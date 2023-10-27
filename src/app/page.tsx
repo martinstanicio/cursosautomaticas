@@ -97,10 +97,15 @@ export default function Home() {
           </div>
         </Section>
         <Section className="flex max-w-4xl flex-col items-center gap-12">
-          <div className="space-y-2 text-center">
+          <div className="space-y-2">
             <Heading as="h2" size={2}>
               Próximos cursos
             </Heading>
+            <p>
+              Estos son nuestros cursos a realizar próximamente. No olvides
+              revisar la lista completa para no perder la oportunidad de
+              participar en todos los cursos de tu interés.
+            </p>
             <p className="text-accent-500">
               Los cupos son limitados, se recomienda inscribirse con
               anticipación para asegurar tu participación.

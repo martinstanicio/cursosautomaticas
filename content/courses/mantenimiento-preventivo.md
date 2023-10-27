@@ -3,6 +3,7 @@ title: Ingreso al mundo de las cajas automáticas - Servicio de mantenimiento pr
 price: 180
 # datetime: 2023-11-13T19:00
 description: Aprende a realizar un eficiente servicio de mantenimiento preventivo en diversas transmisiones automáticas y conviértete en un experto en cuidado automotriz.
+upcoming: true
 images:
   - /courses/mantenimiento-preventivo-00.jpg
 ---

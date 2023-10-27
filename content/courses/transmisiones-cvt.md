@@ -3,6 +3,7 @@ title: Transmisiones automáticas CTV (Variable Continua)
 price: 500
 # datetime: 2023-08-05T16:30-03:00
 description: Descubre el apasionante mundo de las transmisiones automáticas CVT y conviértete en un experto en su funcionamiento y mantenimiento.
+upcoming: true
 images:
   - /courses/transmisiones-cvt-00.jpg
   - /courses/transmisiones-cvt-01.jpg
