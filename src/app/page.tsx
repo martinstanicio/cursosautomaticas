@@ -102,9 +102,9 @@ export default function Home() {
               Próximos cursos
             </Heading>
             <p>
-              Estos son nuestros cursos a realizar próximamente. No olvides
-              revisar la lista completa para no perder la oportunidad de
-              participar en todos los cursos de tu interés.
+              Estos son los cursos a realizar próximamente. No olvides revisar
+              la lista completa para no perder la oportunidad de participar en
+              todos los cursos de tu interés.
             </p>
             <p className="text-accent-500">
               Los cupos son limitados, se recomienda inscribirse con

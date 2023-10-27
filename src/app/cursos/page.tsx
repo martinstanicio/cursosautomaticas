@@ -8,7 +8,7 @@ import { sortedCourses } from "@/lib/courses";
 export const metadata: Metadata = {
   title: "Cursos",
   description:
-    "Aquí podrás encontrar todos nuestros cursos y su fecha de realización. Puedes encontrar información adicional en la página de cada curso.",
+    "Estos son todos nuestros cursos. Puedes encontrar información detallada sobre cada uno en su página específica.",
   alternates: { canonical: "/cursos" },
   openGraph: { url: "/cursos" },
 };
@@ -21,8 +21,8 @@ export default function Cursos() {
           Nuestros Cursos
         </Heading>
         <p>
-          Estos son los cursos a realizarse próximamente. Puedes encontrar
-          información detallada sobre cada uno en su página específica.
+          Estos son todos nuestros cursos. Puedes encontrar información
+          detallada sobre cada uno en su página específica.
         </p>
         <p className="text-accent-500">
           Los cupos son limitados, se recomienda inscribirse con anticipación
