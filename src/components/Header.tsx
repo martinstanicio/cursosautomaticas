@@ -62,16 +62,30 @@ export default function Header({
                 <Menu.Items
                   static
                   as={"nav"}
-                  className="absolute right-0 mt-2 flex w-64 origin-top-right flex-col gap-6 bg-neutral-900 p-6 font-bold uppercase shadow before:absolute before:-top-2 before:right-2 before:h-0 before:w-0 before:border-x-8 before:border-b-8 before:border-x-transparent before:border-b-neutral-900"
+                  className="absolute right-0 mt-2 flex w-64 origin-top-right flex-col gap-4 bg-neutral-900 p-6 font-bold uppercase shadow before:absolute before:-top-2 before:right-2 before:h-0 before:w-0 before:border-x-8 before:border-b-8 before:border-x-transparent before:border-b-neutral-900"
                 >
                   <Menu.Item>
                     {({ active }) => (
-                      <Link
+                      <Button
+                        href="/"
+                        size="small"
+                        intent="secondary"
+                        className={twMerge(active && "text-accent-600")}
+                      >
+                        Inicio
+                      </Button>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <Button
                         href="/contacto"
-                        className={twMerge(active && "text-neutral-50")}
+                        size="small"
+                        intent="secondary"
+                        className={twMerge(active && "text-accent-600")}
                       >
                         Contacto
-                      </Link>
+                      </Button>
                     )}
                   </Menu.Item>
                   <Menu.Item>
@@ -91,6 +105,14 @@ export default function Header({
             </div>
             <nav className="hidden lg:block">
               <ul className="flex items-center gap-6 font-bold uppercase">
+                <li>
+                  <Link
+                    href="/"
+                    className="hover:text-neutral-50 focus:text-neutral-50"
+                  >
+                    Inicio
+                  </Link>
+                </li>
                 <li>
                   <Link
                     href="/contacto"

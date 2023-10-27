@@ -9,6 +9,9 @@ export default function Footer() {
         <Brand />
         <div className="grid grid-cols-1 gap-y-2 sm:grid-cols-2">
           <div className="flex flex-col gap-y-2">
+            <Link href="/" className="link">
+              Inicio
+            </Link>
             <Link href="/cursos" className="link">
               Cursos
             </Link>
