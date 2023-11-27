@@ -20,9 +20,6 @@ dependencies:
   '@trivago/prettier-plugin-sort-imports':
     specifier: ^4.3.0
     version: 4.3.0(prettier@3.1.0)
-  '@types/carbon__icons-react':
-    specifier: ^11.29.0
-    version: 11.29.0(react@18.2.0)
   '@types/node':
     specifier: 20.4.5
     version: 20.4.5
@@ -1239,15 +1236,6 @@ packages:
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
     dependencies:
       '@types/estree': 1.0.5
-    dev: false
-
-  /@types/carbon__icons-react@11.29.0(react@18.2.0):
-    resolution: {integrity: sha512-flTM1afzTPyZRhcRBcHEGqlpYquhnokptdJvyUnWr8Qe9Ma1/FwS4VWyYs67Rc3qfBs+KqAQYAI66OsCswwXvQ==}
-    deprecated: This is a stub types definition. @carbon/icons-react provides its own type definitions, so you do not need this installed.
-    dependencies:
-      '@carbon/icons-react': 11.30.1(react@18.2.0)
-    transitivePeerDependencies:
-      - react
     dev: false
 
   /@types/debug@4.1.12:

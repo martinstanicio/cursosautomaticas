@@ -1,4 +1,4 @@
-import type { CarbonIconType } from "@carbon/icons-react";
+import { CarbonIconType } from "@carbon/icons-react/lib/CarbonIcon";
 
 import Heading from "./Heading";
 
