@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { twMerge } from "tailwind-merge";
 
 import { Nunito, Play } from "next/font/google";
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: Props) {
           {children}
           <Footer />
         </CountryProvider>
+        <Analytics />
       </body>
     </html>
   );
