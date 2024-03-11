@@ -20,30 +20,33 @@ export default function Footer() {
             </Link>
           </div>
           <div className="flex flex-col gap-y-2">
-            <Link
+            <a
               href="https://www.instagram.com/cursos_automaticas"
+              target="_blank"
               className="link"
             >
               Instagram
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://www.facebook.com/profile.php?id=61552512632250&mibextid=ZbWKwL"
+              target="_blank"
               className="link"
             >
               Facebook
-            </Link>
+            </a>
           </div>
         </div>
         <ul className="grid list-none grid-cols-1 gap-y-2 sm:grid-cols-2">
           <li>Cursos Automáticas &copy; {new Date().getFullYear()}</li>
           <li>
             Página web diseñada por{" "}
-            <Link
-              href="mailto:staniciomartin@gmail.com"
+            <a
+              href="https://www.linkedin.com/in/martinstanicio/"
+              target="_blank"
               className="font-bold text-accent-500 hover:underline focus:underline"
             >
               Martín Stanicio
-            </Link>
+            </a>
           </li>
         </ul>
       </footer>
